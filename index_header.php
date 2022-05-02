@@ -49,13 +49,13 @@ if(!isset($_SESSION['Reg_id']))
     <li class='has-sub'><a href='#'><span>Login</span></a>
       <ul>
 		 <li ><a href='barbershop_login.php'><span>Barbershop</span></a></li>
-		 <li ><a href='login.php'><span>Customer</span></a></li>
+		 <li ><a href='customer_login.php'><span>Customer</span></a></li>
       </ul>
    </li>
 	
    <li class='has-sub'><a href='#'><span>Register</span></a>
       <ul>
-         <li ><a href='Barbershop_Add.php'><span>Barbershop</span></a> </li>
+         <li ><a href='barbershop_Add.php'><span>Barbershop</span></a> </li>
          <li ><a href='Customer_Add.php'><span>Customer</span></a></li> 
       </ul>
    </li>
@@ -73,7 +73,7 @@ if(!isset($_SESSION['Reg_id']))
     
     	 <div class="wrap">
           
-    	 	<div class="image group">
+    	 	<div>
 				
 				<div class="grid span_2_of_3">
 				</div>

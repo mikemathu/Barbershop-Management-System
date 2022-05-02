@@ -4,6 +4,9 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+include ('index_header.php');
+?>
 <!DOCTYPE HTML>
 
 
@@ -14,48 +17,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/jquery.min.js"></script> 
 </head>
 <body>
-	<div class="header">
-		<div class="header_top">
-			<div class="wrap">
-			 <div class="logo">
-						<a href="index.php"><img src="images/47.png" alt="" /></a>
-					</div>
-			    <div class="call">
-			    <p><img src="images/45.png" alt="" />Call US: 111-234-56789</p>
-			    </div>
-			  			 
-			<div class="clear"></div>
-  		</div>
-  	  </div>
-	<div class="header_bottom">
-		<div class="wrap">
-	     	<div class="menu">
-	     		<ul>
-			    	<li class="active"><a href="index.php">Home</a></li>
-			    	<li><a href="login.php">Login</a></li>
-			    	<li><a href="Customer_Add.php">Register</a></li>	
-<li><a href="services.php">Services</a></li>					
-			    	<li><a href="about.php">About Us</a></li>
-			    	
-			    	
-			    	<div class="clear"></div>
-     			</ul>
-	     	</div>
-	     	<div class="social-icons">
-	     		<ul>
-	     			<!----------------login------>
-	     		</ul>
-	     	</div>
-	     	<div class="clear"></div>
-	      </div>	     
-	  </div>	
-
-
 	
-	     	<div class="clear"></div>
-	      </div>	     
-	  </div>	
-	   <div class="strip"> </div>
     </div>  
  <div class="main">
     <div class="content">

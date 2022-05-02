@@ -1,3 +1,4 @@
+
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -29,36 +30,50 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			    </div>
 			  			 
 			<div class="clear"></div>
-	      </div>	     
-	   
-  	
-	<div class="header_bottom">
-		<div class="wrap">
-	     	<div id='cssmenu'>
+  		</div>
+  	  </div>
+		<div class="header_bottom">
+			<div class="wrap">
+				<div id='cssmenu'>
 <ul>
-			    	<li class="active"><a href="index.php">Home</a></li>
-			    	<li><a href="login.php">Login</a></li>
-			    	<li><a href="Customer_Add.php">Register</a></li>	
-					<li><a href="services.php">Services</a></li>					
-			    	<li><a href="about.php">About Us</a></li>
-			    	
-			    	<div class="clear"></div>
-     			</ul>
+<?php session_start();
+include 'dbconnect.php';
+
+if(!isset($_SESSION['Reg_id']))
+	{
+		header("location:login.php");
+	}
+	?>
+   <li ><a href='index.php'><span>Home</span></a></li>         
+		 
+    <li class='has-sub'><a href='#'><span>Login</span></a>
+      <ul>
+		 <li ><a href='barbershop_login.php'><span>Barbershop</span></a></li>
+		 <li ><a href='customer_login.php'><span>Customer</span></a></li>
+      </ul>
+   </li>
+	
+   <li class='has-sub'><a href='#'><span>Register</span></a>
+      <ul>
+         <li ><a href='barbershop_Add.php'><span>Barbershop</span></a> </li>
+         <li ><a href='Customer_Add.php'><span>Customer</span></a></li> 
+      </ul>
+   </li>
+ 
+   <li><a href='services.php'><span>Services</span></a></li>
+    <li > <a href='about.php'><span>About Us</span></a></li>
+</ul>
 </div>
-	  </div>
-    </div> 
-		
-		    </div>
-		  </div>
-		</div> 
-		<div class="clear"></div>
-	      </div>	     
-	  </div>	
-	   <div class="strip"> </div>
-    </div>
-	 </div>
+</div>
+</div>
+<div class="strip"> </div>
+
  <div class="main">
-    <div class="content">
+    <div class="content" style="    padding: 106px 0;">
+    
     	 <div class="wrap">
-    	 	<div class="image group">
-				<div class="grid span_2_of_3">	
+          
+    	 	<div>
+				
+				<div class="grid span_2_of_3">
+				</div>
