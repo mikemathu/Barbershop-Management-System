@@ -32,9 +32,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="clear"></div>
   		</div>
   	  </div>
-	<div class="header_bottom">
-		<div class="wrap">
-	     	<div id='cssmenu'>
+		<div class="header_bottom">
+			<div class="wrap">
+				<div id='cssmenu'>
 <ul>
 <?php session_start();
 include 'dbconnect.php';
@@ -94,6 +94,8 @@ if(!isset($_SESSION['Reg_id']))
 </div>
 </div>
 </div>
+<div class="strip"> </div>
+
  <div class="main">
     <div class="content" style="    padding: 106px 0;">
     
