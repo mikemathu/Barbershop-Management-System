@@ -40,9 +40,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 include 'dbconnect.php';
 
 if(!isset($_SESSION['Reg_id']))
-	{
-		header("location:login.php");
-	}
+	// {
+	// 	header("location:customer_Add.php");
+	// }
 	?>
    <li ><a href='index.php'><span>Home</span></a></li>         
 		 

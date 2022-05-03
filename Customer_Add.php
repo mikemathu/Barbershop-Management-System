@@ -1,78 +1,35 @@
 <?php
-include "aheader.php";
+include "index_header.php";
   include 'dbconnect.php';
 ?>
 <html>
 <head>
-<h1><font color="green">     CUSTOMER REGISTRATION</h1></font>
+    <h1><font color="green">     CUSTOMER REGISTRATION</h1></font>
 </head>
-<body>
+    <body>
 <form name="Customer_Add.php" action="Customer_Action.php" method="post" onSubmit="return validate()" enctype="multipart/form-data">
       <table>
           <tr>
-          <td><b>First_name</b></td>
-          <td><input type="text" name="txt_Customer_FName" id="txt_Customer_FName" placeholder="Enter First name..." value="" required onchange='Validate();'></td>
+          <td><b>Username</b></td>
+          <td><input type="text" name="txt_Customer_UserName" id="txt_Customer_UserName" placeholder="Enter User name..." value="" required onchange='Validate();'></td>
           </tr>
           <tr>
 		  <script>		
 function Validate() 
 {
-    var val = document.getElementById('txt_Customer_FName').value;
+    var val = document.getElementById('txt_Customer_UserName').value;
 
     if (!val.match(/^[A-Za-z]{3,}$/)) 
     {
         alert('Only alphabets are allowed');
-		            document.getElementById('txt_Customer_FName').value = "";
+		            document.getElementById('txt_Customer_UserName').value = "";
         return false;
     }
 
     return true;
 }
 </script>
-          <td><b>Last_name</b></td>
-          <td><input type="text" name="txt_Customer_LName" id="txt_Customer_LName" value="" placeholder="Enter Last name..." required onchange='Validatew();'></td>
-          </tr>
-		  <tr>
-		  <script>		
-function Validatew() 
-{
-    var val = document.getElementById('txt_Customer_LName').value;
 
-    if (!val.match(/^[A-Za-z]{2,}$/)) 
-    {
-        alert('Only alphabets are allowed');
-		            document.getElementById('txt_Customer_LName').value = "";
-        return false;
-    }
-
-    return true;
-}
-</script>
-          <td><b>Gender:</b></td>
-          <td><input type="radio" name="txt_Customer_Gender" id="txt_Customer_Gender" value="Male" required>Male
-		  <input type="radio" name="txt_Customer_Gender" id="txt_Customer_Gender" value="Female" required>Female</td>
-          </tr>
-			<td></td>
-          <tr>
-          <td><b>House_Name</b></td>
-          <td><input type="text" name="txt_Housename" id="txt_Housename" value="" placeholder="Enter House name..." required onchange='Validname();'></td>
-          </tr>
-          <tr>
-		  	  <script>		
-function Validname() 
-{
-    var val = document.getElementById('txt_Housename').value;
-
-    if (!val.match(/^[A-Za-z]{3,}$/)) 
-    {
-        alert('Only alphabets are allowed');
-		            document.getElementById('txt_Housename').value = "";
-        return false;
-    }
-
-    return true;
-}
-</script>
           <td><b>District</b></td>
           <td><select name="txt_District">
 		  <option>--Select--</option>
@@ -89,12 +46,12 @@ function Validname()
 		</select></td>
           </tr>
 		  <tr>
-          <td><b>City</b></td>
-          <td><input type="text" name="txt_City" id="txt_City" value="" placeholder="Enter City..." required onchange='Validcity();' ></td>
+          <td><b>Town</b></td>
+          <td><input type="text" name="txt_Town" id="txt_Town" value="" placeholder="Enter Town..." required onchange='Validtown();' ></td>
           </tr>
           <tr>
 		  	  	  <script>		
-function Validcity() 
+function Validtown() 
 {
     var val = document.getElementById('"txt_City').value;
 
@@ -117,7 +74,8 @@ function Validat()
 {
     var val = document.getElementById('Mobile').value;
 
-    if (!val.match(/^[7-9][0-9]{1,9}$/)) 
+    // if (!val.match(/^[7-9][0-9]{1,9}$/)) 
+    if (!val.match(/^[0-9][0-9]{1,9}$/)) 
     {
         alert('Only Numbers are allowed and must contain 10 number');
 	
@@ -201,7 +159,7 @@ function Validp()
 			}
 	</script>
           <td><b>Upload Your Photo</b></td>
-          <td><input type="file" name="txt_Image" id="txt_Image"  placeholder="pic path" accept="image/jpg, image/JPG,image/JPEG, image/jpeg, image/png, image/PNG" required="required"  onChange="load_image(this.id,this.value)"></td>
+          <td><input type="file" name="txt_Image" id="txt_Image"  placeholder="pic path" accept="image/jpg, image/JPG,image/JPEG, image/jpeg, image/png, image/PNG"  onChange="load_image(this.id,this.value)"></td>
           </tr>
           <td></td>
 		  <script type="text/javascript">
