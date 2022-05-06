@@ -16,10 +16,8 @@ $row1 =mysqli_fetch_array($result1);
 
 <div><table><font size="4">
 <img src="Uploads/<?php echo $row['Image'];?>" alt="" height="300" width="250" style="padding-right: 418px; margin-bottom: -252px; padding-left: 500px; margin-top: -173px;">
-<tr><td><b>NAME &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['F_name'];?>&nbsp<?php echo $row['L_name'];?></b></td></tr>
-<tr><td><b>GENDER &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Gender'];?></b></td></tr>
-<tr><td><b>HOUSE NAME &nbsp<?php echo $row['House_name'];?></b></td></tr>
-<tr><td><b>CITY &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['City'];?></b></td></tr>
+<tr><td><b>NAME &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Username'];?></td></tr>
+<tr><td><b>CITY &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Town'];?></b></td></tr>
 <tr><td><b>DISTRICT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row1['Dis_name'];?></b></td></tr>
 <tr><td><b>PHONE &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Mobile'];?></b></td></tr>
 <tr><td><b>EMAIL &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Email'];?></b></td></tr></font></div>

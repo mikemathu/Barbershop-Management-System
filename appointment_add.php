@@ -5,7 +5,7 @@ include 'dbconnect.php';
 ?>
 <?php
 $uname=$_SESSION['username'];
-echo $uname;
+// echo $uname;
 
 $query = "select * from tbl_registration where Username='CustomerOne'";
 $result = mysqli_query($con, $query);
