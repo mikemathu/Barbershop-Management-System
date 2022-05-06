@@ -5,11 +5,12 @@ include 'customer_header.php';
 <?php
 $uname=$_SESSION['username'];
 include 'dbconnect.php';
-$sel="select Reg_id,F_name from tbl_registration Where Email='$uname'";
+// $sel="select Reg_id,F_name from tbl_registration Where Email='$uname'";
+$sel="select Reg_id,Username from tbl_registration Where Email='$uname'";
 $qry=mysqli_query($con,$sel);
 $ans=mysqli_fetch_array($qry);
 $custid=$ans['Reg_id'];
-$custname=$ans['F_name'];
+$custname=$ans['Username'];
 
 
 ?>

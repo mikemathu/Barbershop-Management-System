@@ -4,13 +4,14 @@ include 'admin_header.php';
 ?>
 <html>
 <head>
-<h1> <font color="green">    STAFF REGISTRATION</h1></font><br>
+<h1> <font color="green">    BARBERSHOP REGISTRATION</h1></font><br>
 </head>
 <form name="staff_add.php" action="staff_action.php" method="post" onSubmit="return validate()" enctype="multipart/form-data">
 <body>
       <table>
           <tr>
-          <td><b>First_name</b></td>
+          <td><b>Name</b></td>
+          <!-- <td><input type="text" name="txt_staff_FName" id="txt_staff_FName" value="" required onchange='Validate();'></td> -->
           <td><input type="text" name="txt_staff_FName" id="txt_staff_FName" value="" required onchange='Validate();'></td>
           </tr>
 		   <script>		
@@ -28,11 +29,11 @@ function Validate()
     return true;
 }
 </script>
-          <tr>
+          <!-- <tr>
           <td><b>Last_name</b></td>
           <td><input type="text" name="txt_staff_LName" id="txt_staff_LName" value="" required onchange='Validatew();'></td>
-          </tr>
-		  <script>		
+          </tr> -->
+		  <!-- <script>		
 function Validatew() 
 {
     var val = document.getElementById('txt_staff_LName').value;
@@ -46,18 +47,18 @@ function Validatew()
 
     return true;
 }
-</script>
-		  <tr>
+</script> -->
+		  <!-- <tr>
           <td><b>Gender:</b></td>
           <td><input type="radio" name="txt_staff_Gender" id="txt_staff_Gender" value="Male"required>Male
 		  <input type="radio" name="txt_staff_Gender" id="txt_staff_Gender" value="Female"required>Female</td>
-          </tr>
-		  <td></td>
-          <tr>
+          </tr> -->
+		  <!-- <td></td> -->
+          <!-- <tr>
           <td><b>House_Name</b></td>
           <td><input type="text" name="txt_Housename" id="txt_Housename" value="" required onchange='Validname();'></td>
-          </tr>
-		  <script>		
+          </tr> -->
+		  <!-- <script>		
 function Validname() 
 {
     var val = document.getElementById('txt_Housename').value;
@@ -71,15 +72,15 @@ function Validname()
 
     return true;
 }
-</script>
-		  <tr>
+</script> -->
+		  <!-- <tr>
           <td><b>District</b></td>
           <td><select name="txt_District">
 		  <option>--Select--</option>
 		  <?php
-		  $res=mysqli_query($con,"SELECT * FROM `tbl_district`");
-		  $r=mysqli_num_rows($res);
-		  while($row=mysqli_fetch_array($res))
+		//   $res=mysqli_query($con,"SELECT * FROM `tbl_district`");
+		//   $r=mysqli_num_rows($res);
+		//   while($row=mysqli_fetch_array($res))
 		  {  
 		  ?>
 		  <option value = <?php echo $row['Dis_id'];?>>	  <?php echo $row['Dis_name']; ?></option>
@@ -87,7 +88,7 @@ function Validname()
 		  }
 		  ?>
 		  </select></td>
-          </tr>
+          </tr> -->
 		  <tr>
           <td><b>City</b></td>
           <td><input type="text" name="txt_City" id="txt_City" value="" required onclick='Validcity();'></td>
@@ -149,27 +150,90 @@ function Validata()
 }
 
 </script>
-		  <td><b>Qualification</b></td><td>
+		  <tr>
+          <td><b>Days Of Operation</b></td>
+          <td><input type="text" name="days_of_operation" id="days_of_operation" value="" required onchange='Validata();'></td>
+          </tr>
+		  <script>		
+function Validata() 
+{
+    var val = document.getElementById('days_of_operation').value;
+
+    // if (!val.match(/([A-z0-9_\-\.]){1,}\@([A-z0-9_\-\.]){1,}\.([A-Za-z]){2,4}$/)) 
+    // {
+    //     alert('Enter a Valid Date');
+		
+	// 	     document.getElementById('days_of_operation').value = "";
+    //     return false;
+    // }
+
+    return true;
+}
+
+</script>
+		  <tr>
+          <td><b>Opening Time</b></td>
+          <td><input type="text" name="opening_time" id="opening_time" value="" required onchange='Validata();'></td>
+          </tr>
+		  <script>		
+function Validata() 
+{
+    var val = document.getElementById('opening_time').value;
+
+    // if (!val.match(/([A-z0-9_\-\.]){1,}\@([A-z0-9_\-\.]){1,}\.([A-Za-z]){2,4}$/)) 
+    // {
+    //     alert('Enter a Valid Time');
+		
+	// 	     document.getElementById('opening_time').value = "";
+    //     return false;
+    // }
+
+    return true;
+}
+
+</script>
+		  <tr>
+          <td><b>Closing Time</b></td>
+          <td><input type="text" name="closing_time" id="closing_time" value="" required onchange='Validata();'></td>
+          </tr>
+		  <script>		
+function Validata() 
+{
+    var val = document.getElementById('closing_time').value;
+
+    // if (!val.match(/([A-z0-9_\-\.]){1,}\@([A-z0-9_\-\.]){1,}\.([A-Za-z]){2,4}$/)) 
+    // {
+    //     alert('Enter a Valid Date');
+		
+	// 	     document.getElementById('closing_time').value = "";
+    //     return false;
+    // }
+
+    return true;
+}
+
+</script>
+		  <!-- <td><b>Qualification</b></td><td>
 		  <select name="qualification" size="1">
 		  <option>--Select--</option>
 		  <option value="UG">UG</option>
 		  <option value="PG">PG</option>
 		  </select></td></tr>
-		  <tr>
-          <td><b>Specialization</b></td>
+		  <tr> -->
+          <!-- <td><b>Specialization</b></td>
           <td><select name="txt_specialization">
-		  <option>--Select--</option>
+		  <option>--Select--</option> -->
 		  <?php
-		  $res=mysqli_query($con,"SELECT * FROM `tbl_service_category`");
-		  $r=mysqli_num_rows($res);
-		  while($row=mysqli_fetch_array($res))
+		//   $res=mysqli_query($con,"SELECT * FROM `tbl_service_category`");
+		//   $r=mysqli_num_rows($res);
+		//   while($row=mysqli_fetch_array($res))
 		  {  
 		  ?>
-		  <option value = <?php echo $row['Cat_id'];?>>	  <?php echo $row['Cat_name']; ?></option>
+		  <!-- <option value = <?php echo $row['Cat_id'];?>>	  <?php echo $row['Cat_name']; ?></option> -->
 		  <?php
 		  }
 		  ?>
-		  <tr> <td><b>University/College</b></td>
+		  <!-- <tr> <td><b>University/College</b></td>
           <td><input type="text" name="txt_university" id="txt_university" value="" required></td>
 		  <tr>
 		  <td><b>Year Of Pass</b></td>
@@ -178,7 +242,7 @@ function Validata()
 		  <tr>
           <td><b>Experience</b></td>
           <td><input type="text" name="txt_experience" id="txt_experience" value="" required></td>
-		  <tr>
+		  <tr> -->
 		  <tr>
           <td><b>Password</b></td>
           <td><input type="password" name="txt_Pwd" id="txt_Pwd" value="" placeholder="Enter Password..."required onchange='Validp();'></td>
