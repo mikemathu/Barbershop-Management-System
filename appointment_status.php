@@ -5,6 +5,7 @@ include 'customer_header.php';
 <html>
 <h1><font color="green"><center>APPOINTMENT STATUS</font></h1><br>
 <?php
+echo "$_SESSION[Reg_id]";
 $res1=mysqli_query($con,"SELECT * FROM `tbl_appointment` WHERE `Reg_no`='$_SESSION[Reg_id]' and `Status`!='2' and `Status`!='5'");
 // $res1=mysqli_query($con,"SELECT * FROM `tbl_appointment` WHERE `Reg_no`='$_SESSION[Reg_id]'");
 $row1=mysqli_fetch_array($res1);
@@ -35,18 +36,18 @@ else
 		
 	while($row=mysqli_fetch_array($res))
 	{
-		$a=$row['ser_cat_id'];
+		// $a=$row['ser_cat_id'];
 		$r=$row['Staff_id'];
-	$res1=mysqli_query($con,"SELECT * FROM `tbl_category` WHERE `ser_cat_id`='$a'");
-	$row1=mysqli_fetch_array($res1);
+	// $res1=mysqli_query($con,"SELECT * FROM `tbl_category` WHERE `ser_cat_id`='$a'");
+	//$row1=mysqli_fetch_array($res1);
 	$res2=mysqli_query($con,"SELECT * FROM `tbl_registration` where `Reg_id`='$r'");
 	$row2=mysqli_fetch_array($res2);
 	?>
 	<tr><td><center><?php echo $i?></td>
-<td><center><?php echo $row1['ser_cat_name'];?></td>
+<td><center><?php //echo $row1['ser_cat_name'];?></td>
 <td><center><?php echo $row['Date'];?></td>
 <td><center><?php echo $row['Time'];?></td>
-<td><center><?php echo $row2['F_name'];?> <?php echo $row2['L_name'];?></td>
+<td><center><?php echo $row2['Username'];?></td>
 <?php
 $s=$row['Status'];
 if($s==1)

@@ -1,17 +1,25 @@
 
 <?php
 include 'customer_header.php';
+include 'dbconnect.php';
 ?>
 <?php
 $uname=$_SESSION['username'];
+echo $uname;
+
+$query = "select * from tbl_registration where Username='CustomerOne'";
+$result = mysqli_query($con, $query);
+$row = mysqli_fetch_assoc($result);
+echo $row['Reg_id'];
+
 include 'dbconnect.php';
-// $sel="select Reg_id,F_name from tbl_registration Where Email='$uname'";
-$sel="select Reg_id,Username from tbl_registration Where Email='$uname'";
+$sel="select Reg_id,Username from tbl_registration Where Username='$uname'";
 $qry=mysqli_query($con,$sel);
 $ans=mysqli_fetch_array($qry);
 $custid=$ans['Reg_id'];
 $custname=$ans['Username'];
 
+$uid=$_GET['uid'];
 
 ?>
 <html>
@@ -81,6 +89,9 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
 <form name="Package_booking_Add.php" action="appointment_action.php" method="post" onSubmit="return validate()">
 <body>
       <table>
+      <tr>
+          <td><input type="hidden" name="appointment_reg_no" id="appointment_reg_no" value="<?php echo  $row['Reg_id'];?>"readonly="readonly"></td>
+          </tr>
       <tr> <td>Name</td><td><input type="text" name="slb_Customer_id" id="slb_Customer_id" value="<?php echo $custname; ?>" readonly="readonly">
           <tr>
           <td><b>Date</b></td>
@@ -113,19 +124,23 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
           <td><input type="text" name="service" id="service" value="<?php echo $row1['ser_cat_name'];?>"readonly="readonly"></td>
           </tr>
           <tr>
-          <td><b>Amount</b></td>
-          <td><input type="text" name="txt_Amount" id="txt_Amount" value="<?php echo $row1['ser_cat_price'];?>"readonly="readonly"></td>
+            <td><b>Amount</b></td>
+            <td><input type="text" name="txt_Amount" id="txt_Amount" value="<?php echo $row1['ser_cat_price'];?>"readonly="readonly"></td>
           </tr>
           <tr>
-          <td><b>Appoinment_date</b></td>
-          <td><input type="date" name="txt_Appoinment_Date" id="txt_Appoinment_Date" value="<?php echo date("Y-m-d")?>" min="<?php echo date("Y-m-d")?>" required></td>
+            <td><b>Appoinment_date</b></td>
+            <td><input type="date" name="txt_Appoinment_Date" id="txt_Appoinment_Date" value="<?php echo date("Y-m-d")?>" min="<?php echo date("Y-m-d")?>" required></td>
           </tr>
-		  
-		  <tr>
-          <td><b>Appoinment_time</b></td>
-          <td><input type="time" name="time" id="time"  required/></td></tr>
-		  <td><b>Staff Preferred</b></td>
-          <td><select name="txt_staff">
+          
+          <tr>
+            <td><b>Appoinment_time</b></td>
+            <td><input type="time" name="time" id="time"    required/></td></tr>
+            <tr>
+                    <td><b>Staff Prefered</b></td>
+                    <td><input type="text"name="txt_staff" id="" value="<?php echo $_GET['uid']?>"></td>
+                    </tr>
+		  <!-- <td><b>Staff Preferred</b></td> -->
+          <!-- <td><select name="txt_staff">
 		  <option>--Select--</option>
 		  <?php
 	
@@ -141,7 +156,7 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
 		  <?php
 		  }
 		  ?>
-		</select></td>
+		</select></td> -->
           </tr>
           </tr>
 		  

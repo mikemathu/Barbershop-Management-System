@@ -4,6 +4,9 @@
  session_start();
  $ii=0;
  $f=0;
+ $username = $_SESSION['username'];
+
+	  $appointment_reg_no=$_POST['appointment_reg_no'];
 	  $service=$_POST['service'];
 	  $sql=mysqli_query($con,"select * from tbl_category where ser_cat_name='$service'" );
 	  $row=mysqli_fetch_array($sql);
@@ -12,7 +15,7 @@
 	  $c=$row['Cat_id'];
 	  $date=$_POST['txt_Appoinment_Date'];
 	  $time=$_POST['time'];
-	  $a=1;
+
 	  $s=$_POST['txt_staff'];
 	   	
 	$at="10:00";
@@ -56,8 +59,9 @@ $b2=date("H:i",$b1);
 		}
 		else
 		{
+
 	 $sql=mysqli_query($con,"INSERT INTO `tbl_appointment`(`Reg_no`, `ser_cat_id`, `Cat_id`,`Date`,`Time`,`Staff_id`,`Status`) 
-	  VALUES ('$a','$b','$c','$date','$time','$s',1)");
+	  VALUES ('$appointment_reg_no','$b','$c','$date','$time','$s',1)");
 	 if($sql)
 	  {
 		   echo ("<script language='javascript'>window.alert('Service Booked!!')
@@ -73,8 +77,9 @@ $b2=date("H:i",$b1);
 }
 if($f==0)
 {
+
 	$sql=mysqli_query($con,"INSERT INTO `tbl_appointment`(`Reg_no`, `ser_cat_id`, `Cat_id`,`Date`,`Time`,`Staff_id`,`Status`) 
-	  VALUES ('$a','$b','$c','$date','$time','$s',1)");
+	  VALUES ('$appointment_reg_no','$b','$c','$date','$time','$s',1)");
 if($sql)
 	  {
 		   echo ("<script language='javascript'>window.alert('Service Booked!!')
