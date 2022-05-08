@@ -1,8 +1,7 @@
   <?php
  
           $var_Customer_UserName=$_POST['txt_Customer_UserName'];
-		  $var_Town=$_POST['txt_Town'];
-          $var_District=$_POST['txt_District'];
+          $var_Location=$_POST['txt_Location'];
           $var_Mobile=$_POST['Mobile'];
           $var_Email=$_POST['txt_Email'];
 		  $var_Pwd=$_POST['txt_Pwd'];
@@ -23,8 +22,8 @@
 	  {
 		  move_uploaded_file($_FILES["txt_Image"]["tmp_name"],"Uploads/".$_FILES["txt_Image"]["name"]);
      
-      $varsql="INSERT INTO `tbl_registration`(`Username`, `Town`,
-	  `Dis_id`, `Mobile`, `Email`, `Image`, `Status`)values('$var_Customer_UserName','$var_Town','$var_District','$var_Mobile',
+      $varsql="INSERT INTO `tbl_registration`(`Username`, 
+	  `Location_id`, `Mobile`, `Email`, `Image`, `Status`)values('$var_Customer_UserName','$var_Location','$var_Mobile',
 	  '$var_Email','$var_Image','1')";
       $varresult=mysqli_query($con,$varsql);
 	  $z=mysqli_insert_id($con);

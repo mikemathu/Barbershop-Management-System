@@ -28,7 +28,7 @@ include "customer_header.php";
 		  while($row=mysqli_fetch_array($res))
 		  {  
 		  ?>
-		  <option value = <?php echo $row['Dis_id'];?>>	  <?php echo $row['Dis_name']; ?></option>
+		  <option value = <?php echo $row['Location_id'];?>>	  <?php echo $row['Location_name']; ?></option>
 		  <?php
 		  }
 		  ?>

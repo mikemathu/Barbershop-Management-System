@@ -16,11 +16,12 @@ else
 <table border=3 width=70%>
 <tr>
 <th>SL.NO</th>
-<th>NAME</th>
+<th>CUSTOMER NAME</th>
 <th>SERVICE</th>
 <th>DATE</th>
 <th>TIME</th>
-<th>STAFF</th>
+<!-- <th>STAFF</th> -->
+<th>SHOP</th>
 <th>STATUS</th>
 <th>PAYMENT</th>
 <th></th></tr>
@@ -34,7 +35,8 @@ $res=mysqli_query($con,"SELECT * FROM `tbl_appointment` where `Status`='5'");
 	{
 		$a=$row['ser_cat_id'];
 		$b=$row['Reg_no'];
-		$c=$row['Staff_id'];
+		// $c=$row['Staff_id'];
+		$c=$row['Barbershop_id'];
 	$res1=mysqli_query($con,"SELECT * FROM `tbl_category` WHERE `ser_cat_id`='$a'");
 	$row1=mysqli_fetch_array($res1);
 	
@@ -45,11 +47,11 @@ $res=mysqli_query($con,"SELECT * FROM `tbl_appointment` where `Status`='5'");
 	
 	?>
 	<tr><td><center><?php echo $i?></td>
-	<td><center><?php echo $row2['F_name'];?></td>
+	<td><center><?php echo $row2['Username'];?></td>
 <td><center><?php echo $row1['ser_cat_name'];?></td>
 <td><center><?php echo $row['Date'];?></td>
 <td><center><?php echo $row['Time'];?></td>
-<td><center><?php echo $row3['F_name'];?> <?php echo $row3['L_name'];?></td>
+<td><center><?php echo $row3['Username'];?> </td>
 <?php
 $s=$row['Status'];
 if($s==1)

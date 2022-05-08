@@ -1,81 +1,38 @@
 <?php
-// include "aheader.php";
-include "index_header.php";
   include 'dbconnect.php';
+include 'admin_header.php';
 ?>
 <html>
 <head>
-<h1><font color="green">     Barbershop REGISTRATION</h1></font>
+<h1> <font color="green">    BARBERSHOP REGISTRATION</h1></font><br>
 </head>
+<form name="barbershop_add.php" action="staff_action.php" method="post" onSubmit="return validate()" enctype="multipart/form-data">
 <body>
-<form name="Customer_Add.php" action="Customer_Action.php" method="post" onSubmit="return validate()" enctype="multipart/form-data">
       <table>
           <tr>
-          <td><b>First_name</b></td>
-          <td><input type="text" name="txt_Customer_FName" id="txt_Customer_FName" placeholder="Enter First name..." value="" required onchange='Validate();'></td>
+          <td><b>Shop Name</b></td>
+          <!-- <td><input type="text" name="txt_staff_FName" id="txt_staff_FName" value="" required onchange='Validate();'></td> -->
+          <td><input type="text" name="txt_shop_Name" id="txt_shop_Name" value="" required onchange='Validate();'></td>
           </tr>
-          <tr>
-		  <script>		
+		   <script>		
 function Validate() 
 {
-    var val = document.getElementById('txt_Customer_FName').value;
+    var val = document.getElementById('txt_staff_FName').value;
 
     if (!val.match(/^[A-Za-z]{3,}$/)) 
     {
         alert('Only alphabets are allowed');
-		            document.getElementById('txt_Customer_FName').value = "";
+		            document.getElementById('txt_staff_FName').value = "";
         return false;
     }
 
     return true;
 }
 </script>
-          <td><b>Last_name</b></td>
-          <td><input type="text" name="txt_Customer_LName" id="txt_Customer_LName" value="" placeholder="Enter Last name..." required onchange='Validatew();'></td>
-          </tr>
-		  <tr>
-		  <script>		
-function Validatew() 
-{
-    var val = document.getElementById('txt_Customer_LName').value;
 
-    if (!val.match(/^[A-Za-z]{2,}$/)) 
-    {
-        alert('Only alphabets are allowed');
-		            document.getElementById('txt_Customer_LName').value = "";
-        return false;
-    }
-
-    return true;
-}
-</script>
-          <td><b>Gender:</b></td>
-          <td><input type="radio" name="txt_Customer_Gender" id="txt_Customer_Gender" value="Male" required>Male
-		  <input type="radio" name="txt_Customer_Gender" id="txt_Customer_Gender" value="Female" required>Female</td>
-          </tr>
-			<td></td>
           <tr>
-          <td><b>House_Name</b></td>
-          <td><input type="text" name="txt_Housename" id="txt_Housename" value="" placeholder="Enter House name..." required onchange='Validname();'></td>
-          </tr>
-          <tr>
-		  	  <script>		
-function Validname() 
-{
-    var val = document.getElementById('txt_Housename').value;
-
-    if (!val.match(/^[A-Za-z]{3,}$/)) 
-    {
-        alert('Only alphabets are allowed');
-		            document.getElementById('txt_Housename').value = "";
-        return false;
-    }
-
-    return true;
-}
-</script>
-          <td><b>District</b></td>
-          <td><select name="txt_District">
+          <td><b>Location ID</b></td>
+          <td><select name="txt_location">
 		  <option>--Select--</option>
 		  <?php
 		  $res=mysqli_query($con,"SELECT * FROM `tbl_district`");
@@ -83,37 +40,18 @@ function Validname()
 		  while($row=mysqli_fetch_array($res))
 		  {  
 		  ?>
-		  <option value = <?php echo $row['Dis_id'];?>>	  <?php echo $row['Dis_name']; ?></option>
+		  <option value = <?php echo $row['Location_id'];?>>	  <?php echo $row['Location_name']; ?></option>
 		  <?php
 		  }
 		  ?>
-		</select></td>
+		  </select></td>
           </tr>
-		  <tr>
-          <td><b>City</b></td>
-          <td><input type="text" name="txt_City" id="txt_City" value="" placeholder="Enter City..." required onchange='Validcity();' ></td>
-          </tr>
+		
           <tr>
-		  	  	  <script>		
-function Validcity() 
-{
-    var val = document.getElementById('"txt_City').value;
-
-    if (!val.match(/^[A-Za-z]{3,}$/)) 
-    {
-        alert('Only alphabets are allowed');
-		            document.getElementById('"txt_City').value = "";
-        return false;
-    }
-
-    return true;
-}
-</script>
           <td><b>Mobile</b></td>
-          <td><input type="text" name="Mobile" id="Mobile" maxlength='10' value="" placeholder="Enter Mobile number..." required onchange='Validat();' ></td>
+          <td><input type="text" name="txt_Mobile" id="txt_Mobile" value="" required onchange='Validat();'></td>
           </tr>
-		           <tr>
-				   <script>		
+		  <script>		
 function Validat() 
 {
     var val = document.getElementById('Mobile').value;
@@ -129,15 +67,12 @@ function Validat()
 
     return true;
 }
-
 </script>
-
+		  <tr>
           <td><b>Email</b></td>
-          <td><input type="email" name="txt_Email" id="txt_Email" value="" placeholder="Enter Email id..."required onchange='Validata();'></td>
+          <td><input type="email" name="txt_Email" id="txt_Email" value="" required onchange='Validata();'></td>
           </tr>
-		   
-		         <tr>
-				 <script>		
+		  <script>		
 function Validata() 
 {
     var val = document.getElementById('txt_Email').value;
@@ -154,7 +89,100 @@ function Validata()
 }
 
 </script>
+		  <tr>
+          <td><b>Days Of Operation</b></td>
+          <td><input type="text" name="days_of_operation" id="days_of_operation" value="" required onchange='Validata();'></td>
+          </tr>
+		  <script>		
+function Validata() 
+{
+    var val = document.getElementById('days_of_operation').value;
+
+    // if (!val.match(/([A-z0-9_\-\.]){1,}\@([A-z0-9_\-\.]){1,}\.([A-Za-z]){2,4}$/)) 
+    // {
+    //     alert('Enter a Valid Date');
 		
+	// 	     document.getElementById('days_of_operation').value = "";
+    //     return false;
+    // }
+
+    return true;
+}
+
+</script>
+		  <tr>
+          <td><b>Opening Time</b></td>
+          <td><input type="text" name="opening_time" id="opening_time" value="" required onchange='Validata();'></td>
+          </tr>
+		  <script>		
+function Validata() 
+{
+    var val = document.getElementById('opening_time').value;
+
+    // if (!val.match(/([A-z0-9_\-\.]){1,}\@([A-z0-9_\-\.]){1,}\.([A-Za-z]){2,4}$/)) 
+    // {
+    //     alert('Enter a Valid Time');
+		
+	// 	     document.getElementById('opening_time').value = "";
+    //     return false;
+    // }
+
+    return true;
+}
+
+</script>
+		  <tr>
+          <td><b>Closing Time</b></td>
+          <td><input type="text" name="closing_time" id="closing_time" value="" required onchange='Validata();'></td>
+          </tr>
+		  <script>		
+function Validata() 
+{
+    var val = document.getElementById('closing_time').value;
+
+    // if (!val.match(/([A-z0-9_\-\.]){1,}\@([A-z0-9_\-\.]){1,}\.([A-Za-z]){2,4}$/)) 
+    // {
+    //     alert('Enter a Valid Date');
+		
+	// 	     document.getElementById('closing_time').value = "";
+    //     return false;
+    // }
+
+    return true;
+}
+
+</script>
+		  <!-- <td><b>Qualification</b></td><td>
+		  <select name="qualification" size="1">
+		  <option>--Select--</option>
+		  <option value="UG">UG</option>
+		  <option value="PG">PG</option>
+		  </select></td></tr>
+		  <tr> -->
+          <!-- <td><b>Specialization</b></td>
+          <td><select name="txt_specialization">
+		  <option>--Select--</option> -->
+		  <?php
+		//   $res=mysqli_query($con,"SELECT * FROM `tbl_service_category`");
+		//   $r=mysqli_num_rows($res);
+		//   while($row=mysqli_fetch_array($res))
+		  {  
+		  ?>
+		  <!-- <option value = <?php echo $row['Cat_id'];?>>	  <?php echo $row['Cat_name']; ?></option> -->
+		  <?php
+		  }
+		  ?>
+		  <!-- <tr> <td><b>University/College</b></td>
+          <td><input type="text" name="txt_university" id="txt_university" value="" required></td>
+		  <tr>
+		  <td><b>Year Of Pass</b></td>
+          <td><input type="year" name="txt_year" id="txt_year" value="" required></td>
+		  <tr>
+		  <tr>
+          <td><b>Experience</b></td>
+          <td><input type="text" name="txt_experience" id="txt_experience" value="" required></td>
+		  <tr> -->
+		  <tr>
           <td><b>Password</b></td>
           <td><input type="password" name="txt_Pwd" id="txt_Pwd" value="" placeholder="Enter Password..."required onchange='Validp();'></td>
           </tr>
@@ -198,10 +226,10 @@ function Validp()
 		else{
 			document.getElementById("message").style.color='green';
 			document.getElementById("message");
-		}
+			}
 			}
 	</script>
-          <td><b>Upload Your Photo</b></td>
+          <td><b>Image</b></td>
           <td><input type="file" name="txt_Image" id="txt_Image"  placeholder="pic path" accept="image/jpg, image/JPG,image/JPEG, image/jpeg, image/png, image/PNG" required="required"  onChange="load_image(this.id,this.value)"></td>
           </tr>
           <td></td>
@@ -235,6 +263,3 @@ function validateExtension(v)
 </table>
 </body>
 </html>
-<?php
-include "footer.php";
-?>

@@ -52,10 +52,10 @@ if(!isset($_SESSION['Reg_id']))
       </ul>
    </li>
     <li ><a href='admin_app_aprove.php'><span>Appointments</span></a></li>
-	 <li class='has-sub'><a href='#'><span>Staffs</span></a>
+	 <li class='has-sub'><a href='#'><span>Shops</span></a>
       <ul>
-         <li ><a href='staff_add.php'><span>Add Staff</span></a> </li>
-         <li ><a href='admin_staff_view.php'><span>View Staff</span></a></li>
+         <li ><a href='barbershop_add.php'><span>Add Barbershop</span></a> </li>
+         <li ><a href='admin_barbershop_view.php'><span>View Barbershops</span></a></li>
 		  <li ><a href='leave_approval.php'><span>Leave Requests</span></a></li>
       </ul>
    </li>

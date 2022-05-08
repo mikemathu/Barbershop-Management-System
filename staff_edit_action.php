@@ -16,14 +16,14 @@ if(isset($_POST['submit']))
 	if($img==NULL)
 	{
 		$edit=mysqli_query($con,"UPDATE `tbl_registration` SET `F_name`='$n',`Gender`='$g',`House_name`='$e',
-		`City`='$c',`Dis_id`='$d',`Mobile`='$p',`Email`='$em' WHERE `Reg_id`='$a'");
+		`City`='$c',`Location_id`='$d',`Mobile`='$p',`Email`='$em' WHERE `Reg_id`='$a'");
 		$edit1=mysqli_query($con,"UPDATE `tbl_login` SET `username`='$em',`Password`='$pwd' WHERE `Reg_id`='$a'");
 	}
 	else
 	{
 			move_uploaded_file($_FILES['Image']['tmp_name'],"Uploads/".$_FILES['Image']['name']);
 			$edit=mysqli_query($con,"UPDATE `tbl_registration` SET `F_name`='$n',`Gender`='$g',`House_name`='$e',
-			`City`='$c',`Dis_id`='$d',`Mobile`='$p',`Email`='$em',`Image`='$img' WHERE `Reg_id`='$a'");
+			`City`='$c',`Location_id`='$d',`Mobile`='$p',`Email`='$em',`Image`='$img' WHERE `Reg_id`='$a'");
 			$edit1=mysqli_query($con,"UPDATE `tbl_login` SET `username`='$em',`Password`='$pwd' WHERE `Reg_id`='$a'");
 			
 	}

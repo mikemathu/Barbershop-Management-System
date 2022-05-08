@@ -24,7 +24,7 @@ else
 echo "<br>".$i. ".";	  
 		  ?>
 		 
-		 <a href= "customer_view.php?uid=<?php echo $row['Reg_id'];?>"<?php echo $row['Reg_id'];?>>	  <?php echo $row['F_name']; ?>&nbsp<?php echo $row['L_name']; ?> </a><br>
+		 <a href= "customer_view.php?uid=<?php echo $row['Reg_id'];?>"<?php echo $row['Reg_id'];?>>	  <?php echo $row['Username']; ?></a><br>
 		  <?php
 		  $i++;
 }}

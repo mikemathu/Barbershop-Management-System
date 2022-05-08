@@ -39,7 +39,7 @@ else {?>
 		  while($row1=mysqli_fetch_array($res))
 		  {  
 		  ?>
-		  <option value = <?php echo $row1['Dis_id'];?>>	  <?php echo $row1['Dis_name']; ?></option>
+		  <option value = <?php echo $row1['Location_id'];?>>	  <?php echo $row1['Location_name']; ?></option>
 		  <?php
 		  }
 		  ?>

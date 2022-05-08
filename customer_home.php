@@ -8,8 +8,8 @@ $kid =$_GET['uid'];
 $sel = "SELECT * FROM `tbl_registration` WHERE `Reg_id` = '$kid'";
 $result = mysqli_query($con , $sel);
 $row =mysqli_fetch_array($result);
-$d=$row['Dis_id'];
-$sel1 = "SELECT * FROM `tbl_district` where `Dis_id`='$d'";
+$d=$row['Location_id'];
+$sel1 = "SELECT * FROM `tbl_district` where `Location_id`='$d'";
 $result1 = mysqli_query($con , $sel1);
 $row1 =mysqli_fetch_array($result1);
 ?>
@@ -18,7 +18,7 @@ $row1 =mysqli_fetch_array($result1);
 <img src="Uploads/<?php echo $row['Image'];?>" alt="" height="300" width="250" style="padding-right: 418px; margin-bottom: -252px; padding-left: 500px; margin-top: -173px;">
 <tr><td><b>NAME &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Username'];?></td></tr>
 <tr><td><b>CITY &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Town'];?></b></td></tr>
-<tr><td><b>DISTRICT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row1['Dis_name'];?></b></td></tr>
+<tr><td><b>DISTRICT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row1['Location_name'];?></b></td></tr>
 <tr><td><b>PHONE &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Mobile'];?></b></td></tr>
 <tr><td><b>EMAIL &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Email'];?></b></td></tr></font></div>
 </table>

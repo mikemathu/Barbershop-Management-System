@@ -168,16 +168,16 @@ INSERT INTO `tbl_category` (`ser_cat_id`, `Cat_id`, `ser_cat_name`, `ser_cat_pri
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_district` (
-  `Dis_id` int(2) NOT NULL AUTO_INCREMENT,
-  `Dis_name` varchar(50) NOT NULL,
-  PRIMARY KEY (`Dis_id`)
+  `Location_id` int(2) NOT NULL AUTO_INCREMENT,
+  `Location_name` varchar(50) NOT NULL,
+  PRIMARY KEY (`Location_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `tbl_district`
 --
 
-INSERT INTO `tbl_district` (`Dis_id`, `Dis_name`) VALUES
+INSERT INTO `tbl_district` (`Location_id`, `Location_name`) VALUES
 (1, 'Kasarkode'),
 (2, 'Kannur'),
 (3, 'Wayanad'),
@@ -369,7 +369,7 @@ CREATE TABLE IF NOT EXISTS `tbl_registration` (
   `Gender` varchar(10) NOT NULL,
   `House_name` varchar(70) NOT NULL,
   `City` varchar(20) NOT NULL,
-  `Dis_id` int(15) NOT NULL,
+  `Location_id` int(15) NOT NULL,
   `Mobile` varchar(15) NOT NULL,
   `Email` varchar(30) NOT NULL,
   `Image` varchar(50) NOT NULL,
@@ -381,7 +381,7 @@ CREATE TABLE IF NOT EXISTS `tbl_registration` (
 -- Dumping data for table `tbl_registration`
 --
 
-INSERT INTO `tbl_registration` (`Reg_id`, `F_name`, `L_name`, `Gender`, `House_name`, `City`, `Dis_id`, `Mobile`, `Email`, `Image`, `Status`) VALUES
+INSERT INTO `tbl_registration` (`Reg_id`, `F_name`, `L_name`, `Gender`, `House_name`, `City`, `Location_id`, `Mobile`, `Email`, `Image`, `Status`) VALUES
 (1, 'Liya', 'Mathew', 'Female', 'Anatharackal', 'Kattappana', 9, '8594075060', 'liyamathew11@gmail.com', '7212Liya Mathew.jpg', 1),
 (2, 'Jannet', 'George', 'Female', 'Madapattu', 'Kochera', 9, '9876543210', 'jannet@gmail.com', '7199Janet George.jpg', 1),
 (3, 'Dilu', 'Mariya', 'Female', 'Kallarackal', 'Kanjirapally', 10, '8741256390', 'dilu@gmail.com', 'FB_IMG_1477337941528.jpg', 2),

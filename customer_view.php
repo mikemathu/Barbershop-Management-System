@@ -12,17 +12,15 @@ $result=mysqli_query($con,"select * from tbl_registration where `Reg_id`='$kid'"
 $i=1;
 while($row=mysqli_fetch_array($result))
 {
-	$a=$row['Dis_id'];
-	$result1=mysqli_query($con,"select * from tbl_district where Dis_id='$a'");
+	$a=$row['Location_id'];
+	$result1=mysqli_query($con,"select * from tbl_district where Location_id='$a'");
 	$row1=mysqli_fetch_array($result1);
 ?>
 <table width=50%>
 <img src="uploads/<?php echo $row['Image'];?>" alt="" height="270" width="246"     style="padding-left: 430px; margin-bottom: -263px;"/>
-<tr><td>Name:&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <?php echo $row['F_name'];?>&nbsp <?php echo $row['L_name'];?></td></tr>
-<tr><td>Gender:&nbsp&nbsp &nbsp &nbsp &nbsp <?php echo $row['Gender'];?></td></tr>
-<tr><td>House Name:&nbsp<?php echo $row['House_name'];?></td></tr>
-<tr><td>City:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <?php echo $row['City'];?></td></tr>
-<tr><td>District:&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <?php echo $row1['Dis_name'];?></td></tr>
+<tr><td>Name:&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <?php echo $row['Username'];?></td></tr>
+<!-- <tr><td>Location_id:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <?php echo $row['Location_id'];?></td></tr> -->
+<tr><td>Location:&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <?php echo $row1['Location_name'];?></td></tr>
 <tr><td>Mobile:&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <?php echo $row['Mobile'];?></td></tr>
 <tr><td>Email:&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <?php echo $row['Email'];?></td></tr>
 <td><br><br><a href="admin_customer_view.php?>"><img src="images/fleche.png" width="35px">Back To Previous Page</td></tr></a>

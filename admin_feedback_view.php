@@ -27,13 +27,13 @@ $a=$_SESSION['Reg_id'];
 	$i=1;
 	while($row=mysqli_fetch_array($res))
 	{$kid=$row['Reg_id'];
-		$res1=mysqli_query($con,"SELECT F_name FROM `tbl_registration` where Reg_id='$kid'");
+		$res1=mysqli_query($con,"SELECT Username FROM `tbl_registration` where Reg_id='$kid'");
 	$row1=mysqli_fetch_array($res1);
 	
 	?>
 	
 	<tr><td><center><?php echo $i?></td>
-<td><center><?php echo $row1['F_name'];?></td>
+<td><center><?php echo $row1['Username'];?></td>
 <td><center><?php echo $row['Date'];?></td>
 <td><center><?php echo $row['Feed_msg'];?></td>
 <td><center><a href="mark_read.php?uid=<?php echo $row['Feed_id'];?>" onclick="return confirm('Mark as read??')"><img src="images/symbol_check.png" width="30px"></a></td></tr>

@@ -24,7 +24,7 @@ else
 	  echo "<br>".$i. ". ";
 		  ?>
 		  
-		 <a href= "view_staff.php?uid=<?php echo $row['Reg_id'];?>"<?php echo $row['Reg_id'];?>>UserName:	  <?php echo $row['Username']; ?>&nbsp <br><br> Mobile:<?php echo $row['Mobile']; ?></a><br>
+		 <a href= "view_barbershop.php?uid=<?php echo $row['Reg_id'];?>"<?php echo $row['Reg_id'];?>>UserName:	  <?php echo $row['Username']; ?>&nbsp <br><br> Mobile:<?php echo $row['Mobile']; ?></a><br>
 		  <?php
 		  $i++;
 }}

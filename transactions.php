@@ -30,7 +30,7 @@ $a=$_SESSION['Reg_id'];
 	$i=1;
 	while($row=mysqli_fetch_array($res))
 	{$kid=$row['Reg_id'];
-		$res1=mysqli_query($con,"SELECT F_name FROM `tbl_registration` where Reg_id='$kid'");
+		$res1=mysqli_query($con,"SELECT Username FROM `tbl_registration` where Reg_id='$kid'");
 	$row1=mysqli_fetch_array($res1);
 	$k=$row['Item_id'];
 		$res2=mysqli_query($con,"SELECT * FROM `tbl_items` where Item_id='$k'");
@@ -38,7 +38,7 @@ $a=$_SESSION['Reg_id'];
 	?>
 	
 	<tr><td><center><?php echo $i?></td>
-<td><center><?php echo $row1['F_name'];?></td>
+<td><center><?php echo $row1['Username'];?></td>
 <td><center><?php echo $row['Date'];?></td>
 <td><center><?php echo $row2['Item_name'];?></td>
 <td><center><img src="Uploads/<?php echo $row2['Item_image'];?>" width=80 height=80></td>
