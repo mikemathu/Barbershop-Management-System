@@ -35,8 +35,8 @@
 						  	  <li>Coastal Region</li>
 						  	   <li>Kenya</li>
 						  	 <li>www.barbershopmgnt@gmail.com</li>
-						  	 <li><span>Telephone :</span> +254700000000</li>
-						  	 <li><span>Fax :</span> +01478523690</li>
+						  	 <li><span>Telephone :</span> 0711-222-333</li>
+						  	 <li><span>Fax :</span> +25478523690</li>
 						  </ul>
 				   </div>				  
 			     </div>
@@ -67,7 +67,7 @@
     </div>
   </div>
 <div class="copy_right">
-				<p>Company Name © All rights Reseverd | Design by  <a href="http://w3layouts.com"> LIYA MATHEW</a></p>
+				<p>© All rights Reseverd |   <a href="http://w3layouts.com"></a></p>
 		 </div>
 </body>
 </html>

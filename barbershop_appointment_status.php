@@ -4,8 +4,8 @@ include 'barbershop_header.php';
 				<h1><font color="Green"><center>APPOINTMENT REQUESTS</h1></font>
 				<?php
 $kid=$_GET['uid'];
-// $r=mysqli_query($con,"Select * from `tbl_staff` where `Reg_id`='$kid'");
-$r=mysqli_query($con,"Select * from `tbl_staff` where `Reg_id`=4");
+// $r=mysqli_query($con,"Select * from `tbl_barbershop` where `Reg_id`='$kid'");
+$r=mysqli_query($con,"Select * from `tbl_barbershop` where `Reg_id`=4");
 $r1=mysqli_fetch_array($r);
 // $x=$r1['Cat_id'];
 $x=1;
@@ -33,7 +33,7 @@ else
 <?php
 include 'dbconnect.php';
 $kid=$_GET['uid'];
-$r=mysqli_query($con,"Select * from `tbl_staff` where `Reg_id`='$kid'");
+$r=mysqli_query($con,"Select * from `tbl_barbershop` where `Reg_id`='$kid'");
 $r1=mysqli_fetch_array($r);
 $a=$_SESSION['Reg_id'];
 $x=$r1['Cat_id'];

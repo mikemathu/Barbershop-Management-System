@@ -14,10 +14,10 @@ $i=1;
 while($row=mysqli_fetch_array($result))
 {
 	$kid=$row['Reg_id'];
-	$result1=mysqli_query($con,"select * from tbl_staff where Reg_id='$kid'");
+	$result1=mysqli_query($con,"select * from tbl_barbershop where Reg_id='$kid'");
 $row1=mysqli_fetch_array($result1);
 $d=$row['Location_id'];
-$result2=mysqli_query($con,"select Location_name from tbl_district where Location_id='$d'");
+$result2=mysqli_query($con,"select Location_name from tbl_location where Location_id='$d'");
 $row2=mysqli_fetch_array($result2);
 // $c=$row1['Cat_id'];
 // $result3=mysqli_query($con,"select * from `tbl_service_category` where `Cat_id`='$c'");

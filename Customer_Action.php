@@ -29,7 +29,7 @@
 	  $z=mysqli_insert_id($con);
 	  $varsql1=mysqli_query($con,"INSERT INTO `tbl_login`(`Username`, `Password`, `Role_id`,
 	  `Reg_id`, `Status`) VALUES ('$var_Customer_UserName','$pwd','1','$z','1')");
-    header("Location:customer_login.php");
+    header("Location:login.php");
 		
 	  }
       ?>

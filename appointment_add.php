@@ -146,7 +146,7 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
 		  <option>--Select--</option>
 		  <?php
 	
-	   $res1=mysqli_query($con,"SELECT * FROM `tbl_staff` where `Cat_id`='$x' ");
+	   $res1=mysqli_query($con,"SELECT * FROM `tbl_barbershop` where `Cat_id`='$x' ");
 		 while($row2=mysqli_fetch_array($res1))
 		  {  
 	  $y=$row2['Reg_id'];

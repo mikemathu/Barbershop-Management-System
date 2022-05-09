@@ -31,7 +31,7 @@ function Validate()
 </script>
 
           <tr>
-          <td><b>Location ID</b></td>
+          <td><b>Location</b></td>
           <td><select name="txt_location">
 		  <option>--Select--</option>
 		  <?php

@@ -164,20 +164,20 @@ INSERT INTO `tbl_category` (`ser_cat_id`, `Cat_id`, `ser_cat_name`, `ser_cat_pri
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_district`
+-- Table structure for table `tbl_location`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_district` (
+CREATE TABLE IF NOT EXISTS `tbl_location` (
   `Location_id` int(2) NOT NULL AUTO_INCREMENT,
   `Location_name` varchar(50) NOT NULL,
   PRIMARY KEY (`Location_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
--- Dumping data for table `tbl_district`
+-- Dumping data for table `tbl_location`
 --
 
-INSERT INTO `tbl_district` (`Location_id`, `Location_name`) VALUES
+INSERT INTO `tbl_location` (`Location_id`, `Location_name`) VALUES
 (1, 'Kasarkode'),
 (2, 'Kannur'),
 (3, 'Wayanad'),
@@ -418,10 +418,10 @@ INSERT INTO `tbl_service_category` (`Cat_id`, `Cat_name`, `Status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_staff`
+-- Table structure for table `tbl_barbershop`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_staff` (
+CREATE TABLE IF NOT EXISTS `tbl_barbershop` (
   `Detail_id` int(2) NOT NULL AUTO_INCREMENT,
   `Reg_id` int(2) NOT NULL,
   `Cat_id` int(2) NOT NULL,
@@ -433,10 +433,10 @@ CREATE TABLE IF NOT EXISTS `tbl_staff` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `tbl_staff`
+-- Dumping data for table `tbl_barbershop`
 --
 
-INSERT INTO `tbl_staff` (`Detail_id`, `Reg_id`, `Cat_id`, `Qualification`, `University`, `Year_of_pass`, `Experience`) VALUES
+INSERT INTO `tbl_barbershop` (`Detail_id`, `Reg_id`, `Cat_id`, `Qualification`, `University`, `Year_of_pass`, `Experience`) VALUES
 (1, 3, 1, 'UG', 'Beauty College', 2014, '2'),
 (2, 4, 1, 'UG', 'Beauty College', 2015, '1'),
 (3, 5, 2, 'PG', 'Beauty College', 2017, '1'),

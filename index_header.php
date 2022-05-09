@@ -1,5 +1,5 @@
 
-<!--A Design by W3layouts
+<!--A  W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -26,7 +26,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<a href="index.html"><img src="images/47.png" alt="" /></a>
 					</div>
 			    <div class="call">
-			    	<p><img src="images/45.png" alt="" />Call US: 111-234-56789</p>
+			    	<p><img src="images/45.png" alt="" />Call US: 0711-222-333</p>
 			    </div>
 			  			 
 			<div class="clear"></div>
@@ -46,19 +46,9 @@ if(!isset($_SESSION['Reg_id']))
 	?>
    <li ><a href='index.php'><span>Home</span></a></li>         
 		 
-    <li class='has-sub'><a href='#'><span>Login</span></a>
-      <ul>
-		 <li ><a href='barbershop_login.php'><span>Barbershop</span></a></li>
-		 <li ><a href='customer_login.php'><span>Customer</span></a></li>
-      </ul>
-   </li>
+    <li><a href='login.php'><span>Login</span></a></li>
 	
-   <li class='has-sub'><a href='#'><span>Register</span></a>
-      <ul>
-         <li ><a href='barbershop_Add.php'><span>Barbershop</span></a> </li>
-         <li ><a href='Customer_Add.php'><span>Customer</span></a></li> 
-      </ul>
-   </li>
+   <li ><a href='Customer_Add.php'><span>Register</span></a> </li>
  
    <li><a href='services.php'><span>Services</span></a></li>
     <li > <a href='about.php'><span>About Us</span></a></li>

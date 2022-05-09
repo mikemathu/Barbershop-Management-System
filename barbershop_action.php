@@ -34,14 +34,14 @@
 	  $varsql1=mysqli_query($con,"INSERT INTO `tbl_login`(`Username`, `Password`, `Role_id`,
 	  `Reg_id`, `Status`) VALUES ('$var_barbershop_Name','$p','2','$z','1')");
 	  
-	//    $varsql3= mysqli_query($con,"INSERT INTO `tbl_staff`(`Reg_id`, `Cat_id`, `Qualification`,
+	//    $varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Cat_id`, `Qualification`,
 	//    `University`, `Year_of_pass`, `Experience`) VALUES
 	// ('$z')");
-	$varsql3= mysqli_query($con,"INSERT INTO `tbl_staff`(`Reg_id`, `Cat_id`, `Days_of_operation`, `Opening_time`,
+	$varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Cat_id`, `Days_of_operation`, `Opening_time`,
 	`Closing_time`) VALUES
  ('$z','$var_specialization','$var_days_of_operation','$var_opening_time','$var_closing_time')");
 
-	//    $varsql3= mysqli_query($con,"INSERT INTO `tbl_staff`(`Reg_id`, `Days_of_operation`, `Opening_time`,
+	//    $varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Days_of_operation`, `Opening_time`,
 	//    `Closing_time`) VALUES
 	// ('$z','$var_days_of_operation','$var_opening_time','$var_closing_time')");
      

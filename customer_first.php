@@ -149,7 +149,7 @@ include 'customer_header.php';
 						  	  <li>New City</li>
 						  	   <li>Kenya</li>
 						  	 <li>www.barbershopmgnt@gmail.com</li>
-						  	 <li><span>Telephone :</span> +111-234-56789</li>
+						  	 <li><span>Telephone :</span> +0711-222-333</li>
 						  	 <li><span>Fax :</span> +11-123-4567</li>
 						  </ul>
 				   </div>				  
@@ -181,7 +181,7 @@ include 'customer_header.php';
     </div>
   </div>
 <div class="copy_right">
-				<p>Company Name © All rights Reseverd | Design by  <a href="http://w3layouts.com"> LIYA MATHEW </a></p>
+				<p>© All rights Reseverd |   <a href="http://w3layouts.com"> </a></p>
 		 </div>
 </body>
 </html>

@@ -34,7 +34,7 @@ function Validate()
           <td><select name="txt_Location">
 		  <option>--Select--</option>
 		  <?php
-		  $res=mysqli_query($con,"SELECT * FROM `tbl_district`");
+		  $res=mysqli_query($con,"SELECT * FROM `tbl_location`");
 		  $r=mysqli_num_rows($res);
 		  while($row=mysqli_fetch_array($res))
 		  {  

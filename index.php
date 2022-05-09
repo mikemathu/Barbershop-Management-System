@@ -1,4 +1,4 @@
-﻿<!--A Design by W3layouts
+﻿<!--A  W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -113,8 +113,8 @@ include("index_header.php");
 						  	  <li>Coastal Region</li>
 						  	   <li>Kenya</li>
 						  	 <li>www.barbershopmgnt@gmail.com</li>
-						  	 <li><span>Telephone :</span> +254700000000</li>
-						  	 <li><span>Fax :</span> +01478523690</li>
+						  	 <li><span>Telephone :</span> 0711-222-333</li>
+						  	 <li><span>Fax :</span> +25478523690</li>
 						  </ul>
 				   </div>				  
 			     </div>
@@ -145,7 +145,7 @@ include("index_header.php");
     </div>
   </div>
 <div class="copy_right">
-				<p>© All rights Reseverd | Design by  <a href="http://w3layouts.com"> LIYA MATHEW </a></p>
+				<p>© All rights Reseverd |   <a href="http://w3layouts.com"> </a></p>
 		 </div>
 </body>
 </html>

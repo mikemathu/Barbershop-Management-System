@@ -23,7 +23,7 @@ while($row =mysqli_fetch_array($result))
 		  <option>--Select--</option>
 		  <?php
 		 
-		  $res=mysqli_query($con,"SELECT * FROM `tbl_district`");
+		  $res=mysqli_query($con,"SELECT * FROM `tbl_location`");
 		  $r=mysqli_num_rows($res);
 		  while($row1=mysqli_fetch_array($res))
 		  {  

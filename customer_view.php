@@ -13,7 +13,7 @@ $i=1;
 while($row=mysqli_fetch_array($result))
 {
 	$a=$row['Location_id'];
-	$result1=mysqli_query($con,"select * from tbl_district where Location_id='$a'");
+	$result1=mysqli_query($con,"select * from tbl_location where Location_id='$a'");
 	$row1=mysqli_fetch_array($result1);
 ?>
 <table width=50%>

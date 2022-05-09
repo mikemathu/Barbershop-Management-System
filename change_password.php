@@ -91,7 +91,7 @@ $uname=$_SESSION['username'];
     </div>
   </div>
 <div class="copy_right">
-				<p>Company Name © All rights Reseverd | Design by  <a href="http://w3layouts.com"> LIYA MATHEW</a></p>
+				<p>© All rights Reseverd |   <a href="http://w3layouts.com"></a></p>
 		 </div>
 </body>
 </html>

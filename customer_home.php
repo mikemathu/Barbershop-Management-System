@@ -9,7 +9,7 @@ $sel = "SELECT * FROM `tbl_registration` WHERE `Reg_id` = '$kid'";
 $result = mysqli_query($con , $sel);
 $row =mysqli_fetch_array($result);
 $d=$row['Location_id'];
-$sel1 = "SELECT * FROM `tbl_district` where `Location_id`='$d'";
+$sel1 = "SELECT * FROM `tbl_location` where `Location_id`='$d'";
 $result1 = mysqli_query($con , $sel1);
 $row1 =mysqli_fetch_array($result1);
 ?>
