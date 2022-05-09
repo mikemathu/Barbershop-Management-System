@@ -15,10 +15,9 @@ while($row =mysqli_fetch_array($result))
 <form action="edit_action.php" method="post" enctype="multipart/form-data">
 <table><font size="4">
 <img src="Uploads/<?php echo $row['Image'];?>" alt="" height="300" width="250" style="padding-right: 418px; margin-bottom: -344px; padding-left: 500px; margin-top: -173px;">
-<tr><td><b>USERNAME:&nbsp&nbsp&nbsp <input type="text" name="username" value="<?php echo $row['Username'];?>"></b></td></tr>
-<tr><td><b>LOCATION:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="location" value="<?php echo $row['Town'];?>"></b></td></tr>
-<tr><td><b>DISTRICT: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
-          <select name="district">
+<tr><td><b>USERNAME:&nbsp&nbsp&nbsp <input type="text" name="username" value="<?php echo $row['Username'];?>"></b></td></tr>		 
+<tr><td><b>LOCATION: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+          <select name="location">
 		  <option>--Select--</option>
 		  <?php
 		 

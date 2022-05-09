@@ -37,7 +37,7 @@ else
 	while($row=mysqli_fetch_array($res))
 	{
 		// $a=$row['ser_cat_id'];
-		$r=$row['Staff_id'];
+		$r=$row['Barbershop_id'];
 	// $res1=mysqli_query($con,"SELECT * FROM `tbl_category` WHERE `ser_cat_id`='$a'");
 	//$row1=mysqli_fetch_array($res1);
 	$res2=mysqli_query($con,"SELECT * FROM `tbl_registration` where `Reg_id`='$r'");

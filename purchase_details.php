@@ -15,11 +15,11 @@ include "customer_header.php";
           <td><b>House Name</b></td>
           <td><input type="text" name="add1" id="add1" value=""></td>
           </tr>
-          <tr>
+          <!-- <tr>
           <td><b>City</b></td>
           <td><input type="text" name="add2" id="add2" value=""></td>
-          </tr>
-		   <td><b>District</b></td>
+          </tr> -->
+		   <td><b>Location</b></td>
           <td><select name="district">
 		  <option>--Select--</option>
 		  <?php

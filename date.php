@@ -34,7 +34,7 @@ $res=mysqli_query($con,"SELECT * FROM `tbl_appointment` where `Status`='1' and D
 	{
 		$a=$row['ser_cat_id'];
 		$b=$row['Reg_no'];
-		$c=$row['Staff_id'];
+		$c=$row['Barbershop_id'];
 	$res1=mysqli_query($con,"SELECT * FROM `tbl_category` WHERE `ser_cat_id`='$a'");
 	$row1=mysqli_fetch_array($res1);
 	$res2=mysqli_query($con,"SELECT * FROM `tbl_registration` WHERE `Reg_id`='$b'");

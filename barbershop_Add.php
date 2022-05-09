@@ -89,6 +89,19 @@ function Validata()
 }
 
 </script>
+<td><b>Specialization</b></td>
+          <td><select name="txt_specialization">
+		  <option>--Select--</option>
+		  <?php
+		  $res=mysqli_query($con,"SELECT * FROM `tbl_service_category`");
+		  $r=mysqli_num_rows($res);
+		  while($row=mysqli_fetch_array($res))
+		  {  
+		  ?>
+		  <option value = <?php echo $row['Cat_id'];?>>	  <?php echo $row['Cat_name']; ?></option>
+		  <?php
+		  }
+		  ?>
 		  <tr>
           <td><b>Days Of Operation</b></td>
           <td><input type="text" name="days_of_operation" id="days_of_operation" value="" required onchange='Validata();'></td>

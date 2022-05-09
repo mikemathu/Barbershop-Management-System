@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `tbl_appointment` (
   `Cat_id` int(2) NOT NULL,
   `Date` date NOT NULL,
   `Time` time NOT NULL,
-  `Staff_id` int(2) NOT NULL,
+  `Barbershop_id` int(2) NOT NULL,
   `Status` int(5) NOT NULL,
   PRIMARY KEY (`App_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `tbl_appointment` (
 -- Dumping data for table `tbl_appointment`
 --
 
-INSERT INTO `tbl_appointment` (`App_id`, `Reg_no`, `ser_cat_id`, `Cat_id`, `Date`, `Time`, `Staff_id`, `Status`) VALUES
+INSERT INTO `tbl_appointment` (`App_id`, `Reg_no`, `ser_cat_id`, `Cat_id`, `Date`, `Time`, `Barbershop_id`, `Status`) VALUES
 (1, 1, '1', 1, '2017-07-12', '11:00:00', 4, 4),
 (2, 1, '1', 1, '2017-07-12', '13:00:00', 4, 5),
 (3, 1, '1', 1, '2017-07-12', '12:00:00', 4, 5),

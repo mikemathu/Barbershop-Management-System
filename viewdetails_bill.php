@@ -18,7 +18,7 @@ while($row=mysqli_fetch_array($result))
 	$id=$row['Reg_no'];
 	$results=mysqli_query($con,"select * from tbl_registration where `Reg_id`='$kid'");
 	$rows=mysqli_fetch_array($results);
-	echo "Name : $rows[F_name] $rows[L_name]<br><br>";
+	echo "Name : $rows[Username]<br><br>";
 	echo "Date : $row[Date]<br><br>";
 	$a=$row['ser_cat_id'];
 	$result1=mysqli_query($con,"select * from tbl_category where ser_cat_id='$a'");

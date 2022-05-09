@@ -76,7 +76,7 @@ else
 <body>
       <table>
 		  <tr> 
-		  <td>Name</td><td><input type="text" name="slb_Customer_id" id="slb_Customer_id" value="<?php echo $row['F_name'];?> <?php echo $row['L_name'];?>" readonly="readonly">
+		  <td>Name</td><td><input type="text" name="slb_Customer_id" id="slb_Customer_id" value="<?php echo $row['Username'];?> " readonly="readonly">
           <tr>
           <td><b>Date</b></td>
           <td><input type="text" name="txt_purchase_date" id="txt_purchase_date" value="<?php echo date("Y/m/d") ?>" readonly="readonly"></td>

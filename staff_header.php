@@ -55,7 +55,7 @@ if(!isset($_SESSION['Reg_id']))
    </li>
  <li class='has-sub'><a href='#'><span>Appointments</span></a>
       <ul>
-		 <li ><a href='staff_appointment_status.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Appointment Schedules</span></a></li>
+		 <li ><a href='barbershop_appointment_status.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Appointment Schedules</span></a></li>
       </ul>
    </li>
   

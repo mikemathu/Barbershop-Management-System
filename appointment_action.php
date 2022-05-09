@@ -26,7 +26,7 @@ if(($time>=$at)&&($time<=$bt))
 {
 	if((($date==$cd)&&($time>$ct))||($date!=$cd))
 {			
-$resu=mysqli_query($con,"select * from `tbl_appointment` where `Staff_id`='$s' and `Date`='$date' and `Status`!='5'");
+$resu=mysqli_query($con,"select * from `tbl_appointment` where `Barbershop_id`='$s' and `Date`='$date' and `Status`!='5'");
 while($rw=mysqli_fetch_array($resu))
 {
 $f=1; 
@@ -46,7 +46,7 @@ $b2=date("H:i",$b1);
 	  }
 	  else
 	  {
-	  $sql=mysqli_query($con,"select * from tbl_appointment where Date='$date' and `Staff_id`='$s'" );
+	  $sql=mysqli_query($con,"select * from tbl_appointment where Date='$date' and `Barbershop_id`='$s'" );
 	  while($row=mysqli_fetch_array($sql))
 		{
 		  $ii++;
@@ -60,7 +60,7 @@ $b2=date("H:i",$b1);
 		else
 		{
 
-	 $sql=mysqli_query($con,"INSERT INTO `tbl_appointment`(`Reg_no`, `ser_cat_id`, `Cat_id`,`Date`,`Time`,`Staff_id`,`Status`) 
+	 $sql=mysqli_query($con,"INSERT INTO `tbl_appointment`(`Reg_no`, `ser_cat_id`, `Cat_id`,`Date`,`Time`,`Barbershop_id`,`Status`) 
 	  VALUES ('$appointment_reg_no','$b','$c','$date','$time','$s',1)");
 	 if($sql)
 	  {
@@ -78,7 +78,7 @@ $b2=date("H:i",$b1);
 if($f==0)
 {
 
-	$sql=mysqli_query($con,"INSERT INTO `tbl_appointment`(`Reg_no`, `ser_cat_id`, `Cat_id`,`Date`,`Time`,`Staff_id`,`Status`) 
+	$sql=mysqli_query($con,"INSERT INTO `tbl_appointment`(`Reg_no`, `ser_cat_id`, `Cat_id`,`Date`,`Time`,`Barbershop_id`,`Status`) 
 	  VALUES ('$appointment_reg_no','$b','$c','$date','$time','$s',1)");
 if($sql)
 	  {

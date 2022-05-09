@@ -5,15 +5,17 @@ include 'dbconnect.php';
 ?>
 <?php
 $uname=$_SESSION['username'];
-// echo $uname;
+echo $uname;
 
-$query = "select * from tbl_registration where Username='CustomerOne'";
+$query = "select * from tbl_registration where Username='$uname'";
+// $query = "select * from tbl_registration where Email='$uname'";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 echo $row['Reg_id'];
 
 include 'dbconnect.php';
 $sel="select Reg_id,Username from tbl_registration Where Username='$uname'";
+// $sel="select Reg_id,Username from tbl_registration Where Email='$uname'";
 $qry=mysqli_query($con,$sel);
 $ans=mysqli_fetch_array($qry);
 $custid=$ans['Reg_id'];
