@@ -147,8 +147,8 @@ include 'customer_header.php';
 							<ul>
 						  	  <li>Reflection Salon & Spa</li>
 						  	  <li>New City</li>
-						  	   <li>USA.</li>
-						  	 <li>www.reflection@gmail.com</li>
+						  	   <li>Kenya</li>
+						  	 <li>www.barbershopmgnt@gmail.com</li>
 						  	 <li><span>Telephone :</span> +111-234-56789</li>
 						  	 <li><span>Fax :</span> +11-123-4567</li>
 						  </ul>

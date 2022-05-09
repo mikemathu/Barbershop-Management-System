@@ -16,21 +16,10 @@ while($row =mysqli_fetch_array($result))
 <body>
 <form action="barbershop_edit_action.php" method="post" enctype="multipart/form-data">
 <table><font size="4"><img src="Uploads/<?php echo $row['Image'];?>" alt="" height="300" width="250" style="padding-right: 418px; margin-bottom: -290px; padding-left: 574px; margin-top: -173px;">
-<tr><td><b>NAME: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="name" value="<?php echo $row['F_name'];?>"></b></td></tr>
-<tr>
-<?php
-if($row['Gender']=="male"){?>
-<tr><td><b><font size="3">GENDER:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="gen" value="male" checked="checked" />male<input type="radio" name="gen" value="female" />female</td></tr>
-<?php
-}
-else {?>
-<tr><td><b><font size="3">GENDER:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="gen" value="male" />male<input type="radio" name="gen" checked="checked" value="female" />female</td></tr>
-<?php } ?>
-</tr>
-<tr><td><b>HOUSE NAME:&nbsp&nbsp&nbsp&nbsp <input type="text" name="house" value="<?php echo $row['House_name'];?>"></b></td></tr>
-<tr><td><b>CITY: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp <input type="text" name="city" value="<?php echo $row['City'];?>"></b></td></tr>
-<tr><td><b>DISTRICT:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b>
-          <select name="district">
+<tr><td><b>NAME: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="name" value="<?php echo $row['Username'];?>"></b></td></tr>
+<tr><td><b>HOUSE NAME:&nbsp&nbsp&nbsp&nbsp <input type="text" name="house" value="<?php ;?>"></b></td></tr>
+<tr><td><b>LOCATION:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b>
+          <select name="location">
 		  <option>--Select--</option>
 		  <?php
 		 

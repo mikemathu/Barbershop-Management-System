@@ -6,7 +6,7 @@ include 'admin_header.php';
 <head>
 <h1> <font color="green">    BARBERSHOP REGISTRATION</h1></font><br>
 </head>
-<form name="barbershop_add.php" action="staff_action.php" method="post" onSubmit="return validate()" enctype="multipart/form-data">
+<form name="barbershop_add.php" action="barbershop_action.php" method="post" onSubmit="return validate()" enctype="multipart/form-data">
 <body>
       <table>
           <tr>

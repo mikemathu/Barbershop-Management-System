@@ -59,12 +59,12 @@ if(!isset($_SESSION['Reg_id']))
       </ul>
    </li>
   
-   <li class='has-sub'><a href='#'><span>Leave</span></a>
+   <!-- <li class='has-sub'><a href='#'><span>Leave</span></a>
       <ul>
          <li ><a href='apply_leave.php'><span>Apply Leave</span></a></li>
 		  <li ><a href='leave_status.php'><span>Leave Status</span></a></li>   
       </ul>
-   </li>
+   </li> -->
    <li class='has-sub'><a href='#'><span>Settings</span></a>
       <ul>
          <li ><a href='barbershop_change_pass.php'><span>Change Password</span></a></li>

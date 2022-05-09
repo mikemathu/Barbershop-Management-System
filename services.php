@@ -223,11 +223,11 @@ include ('index_header.php');
 					<h3>Get In Touch</h3>
 							<div class="address">
 							<ul>
-						  	 <li>Reflection Salon & Spa,</li>
-						  	  <li>New City,</li>
-						  	   <li>USA.</li>
-						  	 <li>www.reflection@gmail.com</li>
-						  	 <li><span>Telephone :</span> +06821458963</li>
+						  	 <li>Barbershop Management System</li>
+						  	  <li>Coastal Region</li>
+						  	   <li>Kenya</li>
+						  	 <li>www.barbershopmgnt@gmail.com</li>
+						  	 <li><span>Telephone :</span> +254700000000</li>
 						  	 <li><span>Fax :</span> +01478523690</li>
 						  </ul>
 				   </div>				  
