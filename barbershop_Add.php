@@ -48,6 +48,27 @@ function Validate()
           </tr>
 		
           <tr>
+          <td><b>House Name</b></td>
+          <td><input type="text" name="house_name" id="house_name" value="" required onchange='Validat();'></td>
+          </tr>
+		  <script>		
+function Validat() 
+{
+    var val = document.getElementById('house_name').value;
+
+    // if (!val.match(/^[7-9][0-9]{1,9}$/)) 
+    {
+        // alert('Only Numbers are allowed and must contain 10 number');
+	
+		
+		//             document.getElementById('house_name').value = "";
+        // return false;
+    }
+
+    return true;
+}
+</script>
+          <tr>
           <td><b>Mobile</b></td>
           <td><input type="text" name="txt_Mobile" id="txt_Mobile" value="" required onchange='Validat();'></td>
           </tr>

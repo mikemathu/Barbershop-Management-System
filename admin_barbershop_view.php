@@ -2,13 +2,13 @@
 include 'admin_header.php';
 include 'dbconnect.php';
 ?>
-<h1><font color="green">STAFFS</h1></font>
+<h1><font color="green">BARBERSHOPS</h1></font>
 	<?php
 $res1=mysqli_query($con,"SELECT * FROM `tbl_registration` where `Status`=2");
 $row1=mysqli_fetch_array($res1);
 if(empty($row1))
 {
-	echo "<br><br><center><font color=red size=3>No Staffs Are Added Yet!!!</font></center>";
+	echo "<br><br><center><font color=red size=3>No Barbershops Are Added Yet!!!</font></center>";
 }
 else
 {

@@ -56,7 +56,7 @@ if(!isset($_SESSION['Reg_id']))
       <ul>
          <li ><a href='barbershop_add.php'><span>Add Barbershop</span></a> </li>
          <li ><a href='admin_barbershop_view.php'><span>View Barbershops</span></a></li>
-		  <li ><a href='leave_approval.php'><span>Leave Requests</span></a></li>
+		  <!-- <li ><a href='leave_approval.php'><span>Leave Requests</span></a></li> -->
       </ul>
    </li>
    <li class='has-sub'><a href='#'><span>Customers</span></a>

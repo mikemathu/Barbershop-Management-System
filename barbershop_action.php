@@ -1,6 +1,7 @@
   <?php
           $var_barbershop_Name=$_POST['txt_shop_Name'];
           $var_location=$_POST['txt_location'];
+          $var_house_name=$_POST['house_name'];
 		  $var_specialization=$_POST['txt_specialization'];
           $var_Mobile=$_POST['txt_Mobile'];
 		  $var_Email=$_POST['txt_Email'];
@@ -38,8 +39,8 @@
 	//    `University`, `Year_of_pass`, `Experience`) VALUES
 	// ('$z')");
 	$varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Cat_id`, `Days_of_operation`, `Opening_time`,
-	`Closing_time`) VALUES
- ('$z','$var_specialization','$var_days_of_operation','$var_opening_time','$var_closing_time')");
+	`Closing_time`, `House_name`) VALUES
+ ('$z','$var_specialization','$var_days_of_operation','$var_opening_time','$var_closing_time', '$var_house_name')");
 
 	//    $varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Days_of_operation`, `Opening_time`,
 	//    `Closing_time`) VALUES
