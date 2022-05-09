@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 include 'dbconnect.php';
 ?>
 				<head><center><br><br>
@@ -36,7 +36,7 @@ while($row=mysqli_fetch_array($results))
 <tr><td><?php echo $i;?></td>
 <td><?php echo $row['Date'];?></td>
 <td><?php echo $row['Feed_msg'];?></td>
-<td><a href='staff_feedback_edit.php?uid=<?php echo $row['Feed_id'];?>'><img src="images/edit.ico" width="30px"></a></td>
+<td><a href='barbershop_feedback_edit.php?uid=<?php echo $row['Feed_id'];?>'><img src="images/edit.ico" width="30px"></a></td>
 <td><a href="feedback_delete.php?uid=<?php echo $row['Feed_id'];?>" onclick="return confirm('Are you sure??')"><img src="images/DeleteRed.png" width="30px"></td></tr>
 <?php
 $i++;
@@ -44,7 +44,7 @@ $i++;
 }
 ?>
 </table>
-<br><br><a href="staff_feedback.php">Add Feedback</a>
+<br><br><a href="barbershop_feedback.php">Add Feedback</a>
 <br>
 <style>
 table {

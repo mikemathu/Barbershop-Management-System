@@ -16,8 +16,10 @@ $result=mysqli_query($con,"select * from tbl_appointment where `App_id`='$kid' a
 while($row=mysqli_fetch_array($result))
 {
 	$id=$row['Reg_no'];
-	$results=mysqli_query($con,"select * from tbl_registration where `Reg_id`='$kid'");
+	// $results=mysqli_query($con,"select * from tbl_registration where `Reg_id`='$kid'");
+	$results=mysqli_query($con,"select * from tbl_registration where `Reg_id`='$id'");
 	$rows=mysqli_fetch_array($results);
+	// echo "Name : $rows[Username]<br><br>";
 	echo "Name : $rows[Username]<br><br>";
 	echo "Date : $row[Date]<br><br>";
 	$a=$row['ser_cat_id'];

@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 ?>
 <h1><center><font color="green">STAFF PROFILE</h1></font></fieldset>
 <?php

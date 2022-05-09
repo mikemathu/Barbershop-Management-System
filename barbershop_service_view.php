@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 ?>
 </head>
 <body><br><br>

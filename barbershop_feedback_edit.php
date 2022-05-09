@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 ?>
 <?php
 $kid =$_GET['uid'];

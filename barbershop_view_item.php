@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 ?>
 				<h1>ITEM DETAILS</h1><br>
 </head>
@@ -39,7 +39,7 @@ $i++;
 }
 ?>
 </table>
-<td><a href="staff_item_select.php"><img src="images/fleche.png" width="24px" style="    padding-left: 363px;">Back</td></tr></a>
+<td><a href="barbershop_item_select.php"><img src="images/fleche.png" width="24px" style="    padding-left: 363px;">Back</td></tr></a>
 <style>
 table {
     border-collapse: collapse;

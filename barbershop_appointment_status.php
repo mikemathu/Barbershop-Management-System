@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 ?>
 				<h1><font color="Green"><center>APPOINTMENT REQUESTS</h1></font>
 				<?php
@@ -68,7 +68,7 @@ if($s==1)
 else if($s==0)
 {
 ?><td><center><font color="green"><b><?php echo "Approved";?></b></td><?php }?>
-<td><center><a href="staff_appoint_service.php?uid=<?php echo $row['App_id'];?>" onclick="return confirm('Serviced this customer??')"><img src="images/symbol_check.png" width="30px"></a></td>
+<td><center><a href="barbershop_appoint_service.php?uid=<?php echo $row['App_id'];?>" onclick="return confirm('Serviced this customer??')"><img src="images/symbol_check.png" width="30px"></a></td>
 <?php
 $i++;
 }}

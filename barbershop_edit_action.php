@@ -27,6 +27,6 @@ if(isset($_POST['submit']))
 			$edit1=mysqli_query($con,"UPDATE `tbl_login` SET `username`='$em',`Password`='$pwd' WHERE `Reg_id`='$a'");
 			
 	}
-	header("location:staff_home.php?uid=$_SESSION[Reg_id]");
+	header("location:barbershop_home.php?uid=$_SESSION[Reg_id]");
 }
 ?>

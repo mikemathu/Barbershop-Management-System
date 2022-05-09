@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 ?>
 <html>
 <body background="images/b34c146185a29f9ec8de118126f9d76a.jpg">

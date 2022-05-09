@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 ?>
 <html>
 <form  action="#" method="post" >
@@ -24,7 +24,7 @@ else
 		  {  
 	  echo "<font size=5><br>".$i. ".";
 		  ?>
-		  <a href="staff_view_item.php?uid=<?php echo $row['Item_Cat_id'];?>" >	  <?php echo $row['Item_Cat_name']; ?></a>
+		  <a href="barbershop_view_item.php?uid=<?php echo $row['Item_Cat_id'];?>" >	  <?php echo $row['Item_Cat_name']; ?></a>
 		  <br><?php
 		  $i++;
 }}

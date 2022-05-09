@@ -43,14 +43,14 @@ if(!isset($_SESSION['Reg_id']))
 		header("location:login.php");
 	}
 	?>
-   <li ><a href='staff_first.php'><span>Home</span></a></li>
+   <li ><a href='barbershop_first.php'><span>Home</span></a></li>
 	
  
 	
    <li class='has-sub'><a href='#'><span>Profile</span></a>
       <ul>
-         <li ><a href='staff_home.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>View Profile</span></a> </li>
-         <li ><a href='staff_edit.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Edit Profile</span></a></li> 
+         <li ><a href='barbershop_home.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>View Profile</span></a> </li>
+         <li ><a href='barbershop_edit.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Edit Profile</span></a></li> 
       </ul>
    </li>
  <li class='has-sub'><a href='#'><span>Appointments</span></a>
@@ -67,7 +67,7 @@ if(!isset($_SESSION['Reg_id']))
    </li>
    <li class='has-sub'><a href='#'><span>Settings</span></a>
       <ul>
-         <li ><a href='staff_change_pass.php'><span>Change Password</span></a></li>
+         <li ><a href='barbershop_change_pass.php'><span>Change Password</span></a></li>
 		  <li ><a href='logout.php'><span>Logout</span></a></li>   
       </ul>
    </li>

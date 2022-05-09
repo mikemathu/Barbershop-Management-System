@@ -9,6 +9,6 @@ $var_Feedback=$_POST['txt_Feedback'];
 		  //$z=$_SESSION['Reg_id'];
 $varsql="insert into `tbl_feedback` (`Reg_id`,`Date`,`Feed_msg`,`status`) values('$kid','$var_Feedback_Date','$var_Feedback','1')";
 $varresult=mysqli_query($con,$varsql);
-header("Location:staff_feedback_show.php");
+header("Location:barbershop_feedback_show.php");
 }
 ?>

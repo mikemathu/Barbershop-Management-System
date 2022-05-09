@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 include 'dbconnect.php';
 $uname=$_SESSION['username'];
 $sel="select `Reg_id` from `tbl_registration` Where `Email`='$uname'";
@@ -46,7 +46,7 @@ inline: true
 //**********************
 </script>
 
-<center><form name="staffFeedback.php" action="staff_fee_action.php" method="post" onSubmit="return validate()">
+<center><form name="staffFeedback.php" action="barbershop_fee_action.php" method="post" onSubmit="return validate()">
 <body>
       <table>
           <tr>
@@ -63,7 +63,7 @@ inline: true
           <td></td>
           <td><input type="submit" name="cmd" id="cmd" value="Save"></td>
           </tr>
-		 <tr><td> <b><a href="staff_feedback_show.php">Show Feedbacks</a></b></tr></td>
+		 <tr><td> <b><a href="barbershop_feedback_show.php">Show Feedbacks</a></b></tr></td>
 </table>
 </body>
 </html>

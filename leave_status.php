@@ -1,7 +1,7 @@
 
 <?php
 include 'dbconnect.php';
-include 'staff_header.php';
+include 'barbershop_header.php';
 ?>
 				<html>
 <h1><font color=green><center>LEAVE APPLICATION</h1></font>

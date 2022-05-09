@@ -13,13 +13,13 @@ include 'dbconnect.php';
     {
     echo $query="update tbl_login set Password='$n' where Username='$uname'";
     $res=mysqli_query($con,$query);
-    header("Location:staff_change_pass.php?s=1");
+    header("Location:barbershop_change_pass.php?s=1");
     
     }
 	else
 	{
 
-	  header("Location:staff_change_pass.php?s=2");
+	  header("Location:barbershop_change_pass.php?s=2");
 	}
     
 ?>

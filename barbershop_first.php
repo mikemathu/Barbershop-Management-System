@@ -1,5 +1,5 @@
 <?php 
-include 'staff_header.php';
+include 'barbershop_header.php';
 include 'dbconnect.php';
 ?>
        <marquee><b><font size="5">Welcome to you <?php echo $_SESSION['username'];?></b></font></marquee>

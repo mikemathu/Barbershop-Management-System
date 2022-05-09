@@ -1,5 +1,5 @@
 <?php
-include 'staff_header.php';
+include 'barbershop_header.php';
 ?>
 
 
@@ -41,7 +41,7 @@ $uname=$_SESSION['username'];
  ?>
 
  
-                                 <form action="staff_password_action.php" method="post" onsubmit="return validate()">
+                                 <form action="barbershop_password_action.php" method="post" onsubmit="return validate()">
 								
                                        <br><br>
 									   <div align="center">

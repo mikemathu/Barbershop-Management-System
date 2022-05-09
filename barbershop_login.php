@@ -56,7 +56,7 @@ if(isset($_POST['submit']))
 			$_SESSION['username']=$row['Username'];
 			//$_SESSION['password']=$row['Password'];
 			$_SESSION['Reg_id']=$row['Reg_id'];
-			header("Location:staff_first.php");
+			header("Location:barbershop_first.php");
 			
 		}	
 		
