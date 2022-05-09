@@ -1,3 +1,3 @@
 <?php
-    $con=mysqli_connect('localhost','root','','salon_management');
+    $con=mysqli_connect('localhost','root','','barbershop_management');
 ?>
