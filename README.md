@@ -1,1 +1,1 @@
-# Salon-management
+# Barbershop-management-system
