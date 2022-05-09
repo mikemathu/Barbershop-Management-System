@@ -45,7 +45,7 @@ echo "<tr><td>$i</td>
 <td>$row1[Brand_name]</td>
 <td>$row2[Item_Cat_name]</td>
 <td>$row[Item_price]</td>
-<td><img src=uploads/$row[Item_image]  height=100 width=200/></td>
+<td><img src=images/$row[Item_image]  height=100 width=200/></td>
 <td><a href='cart.php?uid=$row[Item_id]'><img src=images/24.gif width=50px></a></td>";
 $i++;
 }

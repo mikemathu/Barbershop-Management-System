@@ -41,7 +41,7 @@ $a=$_SESSION['Reg_id'];
 <td><center><?php echo $row1['Username'];?></td>
 <td><center><?php echo $row['Date'];?></td>
 <td><center><?php echo $row2['Item_name'];?></td>
-<td><center><img src="Uploads/<?php echo $row2['Item_image'];?>" width=80 height=80></td>
+<td><center><img src="images/<?php echo $row2['Item_image'];?>" width=80 height=80></td>
 <td><center><?php echo $row2['Item_price'];?></td>
 <td><center><?php echo $row['Quantity'];?></td>
 <td><center><a href="app_purchase.php?uid=<?php echo $row['Pur_id'];?>" onclick="return confirm('Approve this purchase request??')"><img src="images/symbol_check.png" width="30px"></a></td></tr>

@@ -21,7 +21,7 @@ if(isset($_POST['submit']))
 	}
 	else
 	{
-			move_uploaded_file($_FILES['Image']['tmp_name'],"Uploads/".$_FILES['Image']['name']);
+			move_uploaded_file($_FILES['Image']['tmp_name'],"images/".$_FILES['Image']['name']);
 			$edit=mysqli_query($con,"UPDATE `tbl_registration` SET `Username`='$n',`Location_id`='$d',`Mobile`='$p',`Email`='$em',`Image`='$img' WHERE `Reg_id`='$a'");
 			$edit1=mysqli_query($con,"UPDATE `tbl_login` SET `Username`='$n', WHERE `Reg_id`='$a'");
 			

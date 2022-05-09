@@ -17,7 +17,7 @@ while($row=mysqli_fetch_array($result))
 	$row1=mysqli_fetch_array($result1);
 ?>
 <table width=50%>
-<img src="uploads/<?php echo $row['Image'];?>" alt="" height="270" width="246"     style="padding-left: 430px; margin-bottom: -263px;"/>
+<img src="images/<?php echo $row['Image'];?>" alt="" height="270" width="246"     style="padding-left: 430px; margin-bottom: -263px;"/>
 <tr><td>Name:&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <?php echo $row['Username'];?></td></tr>
 <!-- <tr><td>Location_id:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <?php echo $row['Location_id'];?></td></tr> -->
 <tr><td>Location:&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <?php echo $row1['Location_name'];?></td></tr>

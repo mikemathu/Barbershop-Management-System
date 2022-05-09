@@ -39,7 +39,7 @@ while($row=mysqli_fetch_array($results))
 	$row1=mysqli_fetch_array($res);
 echo "<tr><td>$x</td>
 <td>$row[Date]</td>
-<td><img src=uploads/$row1[Item_image]  height=100 width=200/></td>
+<td><img src=images/$row1[Item_image]  height=100 width=200/></td>
 <td>$row1[Item_name]</td>
 <td>$row[Quantity]</td>
 <td>$row[Total]</td>";

@@ -29,11 +29,11 @@ include('index_header.php');
       			<div class="company_address">
 				     	<h2>Company Information :</h2>
 						    	<p>Barbershop Management System</p>
-						   		<p>New City</p>
-						   		<p>USA</p>
+						   		<p>Coastal Region</p>
+						   		<p>Kenya</p>
 				   		<p>Phone:(00) 222 666 444</p>
 				   		<p>Fax: (000) 123 45 6 78</p>
-				 	 	<p>Email: <span>reflection@mycompany.com</span></p>
+				 	 	<p>Email: <span>barbershopmgnt@gmail.com</span></p>
 				   		<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
 				 </div>
 			  </div>			

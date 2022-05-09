@@ -17,7 +17,7 @@ $result4=mysqli_query($con,"select Cat_name from tbl_service_category");
 $row4=mysqli_fetch_array($result4);
 ?><center>
 <table><font size="4">
-<img src="Uploads/<?php echo $row['Image'];?>" alt="" height="300" width="250" style="padding-right: 418px; margin-bottom: -330px; padding-left: 500px; margin-top: -173px;">
+<!-- <img src="images/<?php //echo $row['Image'];?>" alt="" height="200" width="250" style="padding-right: 418px; margin-bottom: -330px; padding-left: 500px; margin-top: -600px;"> -->
 <tr><td><b>NAME:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Username'];?>&nbsp </b></td></tr>
 <tr><td><b>LOCATION:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row1['Location_name'];?></b></td></tr>
 <tr><td><b>PHONE:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Mobile'];?></b></td></tr>

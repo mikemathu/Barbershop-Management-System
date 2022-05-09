@@ -15,7 +15,7 @@ while($row =mysqli_fetch_array($result))
 <div><br><h1><b><center><font color="green">EDIT PROFILE</font></b></h1>
 <body>
 <form action="barbershop_edit_action.php" method="post" enctype="multipart/form-data">
-<table><font size="4"><img src="Uploads/<?php echo $row['Image'];?>" alt="" height="300" width="250" style="padding-right: 418px; margin-bottom: -290px; padding-left: 574px; margin-top: -173px;">
+<table><font size="4"><img src="images/<?php echo $row['Image'];?>" alt="" height="300" width="250" style="padding-right: 418px; margin-bottom: -290px; padding-left: 574px; margin-top: -173px;">
 <tr><td><b>NAME: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="name" value="<?php echo $row['Username'];?>"></b></td></tr>
 <tr><td><b>HOUSE NAME:&nbsp&nbsp&nbsp&nbsp <input type="text" name="house" value="<?php ;?>"></b></td></tr>
 <tr><td><b>LOCATION:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b>

@@ -4,7 +4,7 @@ include "index_header.php";
 ?>
 <html>
 <head>
-    <h1><font color="green">     CUSTOMER REGISTRATION</h1></font>
+    <h1><font color="green">CUSTOMER REGISTRATION</h1></font>
 </head>
     <body>
 <form name="Customer_Add.php" action="Customer_Action.php" method="post" onSubmit="return validate()" enctype="multipart/form-data">

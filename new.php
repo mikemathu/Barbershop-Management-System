@@ -89,7 +89,7 @@ if(($t<=$a2)||($t>=$b2))
 		
 		
 		
-		<td><img src="uploads/<?php echo $row['image'];?>"height="120"width="150"/></img></td>
+		<td><img src="images/<?php echo $row['image'];?>"height="120"width="150"/></img></td>
 			<td> <a href ="hbook.php?uid=<?php echo $row['id'];?>&t=<?php echo $t;?>&m=<?php echo $m;?>">Get Appointment </a></td>
 	
 	</tr>
@@ -105,7 +105,7 @@ if(($t<=$a2)||($t>=$b2))
 		
 		
 		
-		<td><img src="uploads/<?php echo $row['image'];?>"height="120"width="150"/></img></td>
+		<td><img src="images/<?php echo $row['image'];?>"height="120"width="150"/></img></td>
 			<td> <a href ="hbook.php?uid=<?php echo $row['id'];?>&t=<?php echo $t;?>&m=<?php echo $m;?>">Get Appointment </a></td>
 	
 	</tr>

@@ -20,7 +20,7 @@
 	  }
 	  else
 	  {
-		  move_uploaded_file($_FILES["txt_Image"]["tmp_name"],"Uploads/".$_FILES["txt_Image"]["name"]);
+		  move_uploaded_file($_FILES["txt_Image"]["tmp_name"],"images/".$_FILES["txt_Image"]["name"]);
      
       $varsql="INSERT INTO `tbl_registration`(`Username`, 
 	  `Location_id`, `Mobile`, `Email`, `Image`, `Status`)values('$var_Customer_UserName','$var_Location','$var_Mobile',

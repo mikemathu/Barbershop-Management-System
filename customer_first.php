@@ -146,7 +146,7 @@ include 'customer_header.php';
 							<div class="address">
 							<ul>
 						  	  <li>Reflection Salon & Spa</li>
-						  	  <li>New City</li>
+						  	  <li>Coastal Region</li>
 						  	   <li>Kenya</li>
 						  	 <li>www.barbershopmgnt@gmail.com</li>
 						  	 <li><span>Telephone :</span> +0711-222-333</li>

@@ -12,7 +12,7 @@ $kid=$_GET['uid'];
 	}
 	else
 	{
-		move_uploaded_file($_FILES['Image']['tmp_name'],"Uploads/".$_FILES['Image']['name']);
+		move_uploaded_file($_FILES['Image']['tmp_name'],"images/".$_FILES['Image']['name']);
 	$edit=mysqli_query($con,"UPDATE `tbl_items` SET `Item_name`='$a',`Brand_id`='$b',`Item_price`='$d',`Item_image`='$img' where `Item_id`='$kid'");
 	}
 	header("location:view_itemcategory_action.php");

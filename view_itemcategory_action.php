@@ -49,7 +49,7 @@ echo "<tr><td>$i</td>
 <td>$row2[Item_Cat_name]</td>
 <td>$row[Item_price]</td>
 <td>$row[Item_stock]</td>
-<td><img src=uploads/$row[Item_image]  height=100 width=200/></td>
+<td><img src=images/$row[Item_image]  height=100 width=200/></td>
 <td><a href='item_edit.php?uid=$row[Item_id]'><img src=images/edit.ico width=24px></a></td>";
 ?>
 	<td><a href="item_delete.php?uid=<?php echo $row['Item_id'];?>" onclick="return confirm('Are you sure??')"><img src="images/DeleteRed.png" width="24px"></td></tr>

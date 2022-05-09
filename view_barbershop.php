@@ -24,7 +24,7 @@ $row2=mysqli_fetch_array($result2);
 // $row3=mysqli_fetch_array($result3);
 	?>
 	<table border=2 width=10%>
-<img src="uploads/<?php echo $row['Image'];?>" alt="" height="281" width="246"     style="padding-left: 430px; margin-bottom: -325px;"/>
+<img src="images/<?php echo $row['Image'];?>" alt="" height="281" width="246"     style="padding-left: 430px; margin-bottom: -325px;"/>
 <tr><td>Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $row['Username'];?> </td></tr>
 
 
