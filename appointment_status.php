@@ -5,7 +5,7 @@ include 'customer_header.php';
 <html>
 <h1><font color="green"><center>APPOINTMENT STATUS</font></h1><br>
 <?php
-echo "$_SESSION[Reg_id]";
+//echo "$_SESSION[Reg_id]";
 $res1=mysqli_query($con,"SELECT * FROM `tbl_appointment` WHERE `Reg_no`='$_SESSION[Reg_id]' and `Status`!='2' and `Status`!='5'");
 // $res1=mysqli_query($con,"SELECT * FROM `tbl_appointment` WHERE `Reg_no`='$_SESSION[Reg_id]'");
 $row1=mysqli_fetch_array($res1);

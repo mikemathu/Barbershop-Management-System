@@ -1,7 +1,7 @@
 <?php
 include 'customer_header.php';
 ?>
-<h1><font color="green">USER PROFILE</h1></font></fieldset>
+<h1><font color="green">CUSTOMER PROFILE</h1></font></fieldset>
 <?php
 
 $kid =$_GET['uid'];

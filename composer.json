@@ -1,0 +1,5 @@
+{
+    "require": {
+        "releans/releansapi": "^2.0"
+    }
+}

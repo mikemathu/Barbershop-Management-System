@@ -5,13 +5,13 @@ include 'dbconnect.php';
 ?>
 <?php
 $uname=$_SESSION['username'];
-echo $uname;
+//echo $uname;
 
 $query = "select * from tbl_registration where Username='$uname'";
 // $query = "select * from tbl_registration where Email='$uname'";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
-echo $row['Reg_id'];
+//echo $row['Reg_id'];
 
 include 'dbconnect.php';
 $sel="select Reg_id,Username from tbl_registration Where Username='$uname'";
@@ -137,13 +137,42 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
           <tr>
             <td><b>Appoinment_time</b></td>
             <td><input type="time" name="time" id="time"    required/></td></tr>
-            <tr>
-                    <td><b>Staff Prefered</b></td>
-                    <td><input type="text"name="txt_staff" id="" value="<?php echo $_GET['uid']?>"></td>
-                    </tr>
-		  <!-- <td><b>Staff Preferred</b></td> -->
-          <!-- <td><select name="txt_staff">
-		  <option>--Select--</option>
+        
+            <td><b>Barbershop Available</b></td> 
+                <td><select name="txt_staff">
+            <option>--Select--</option>
+            
+            <?php
+        
+              $res1=mysqli_query($con,"SELECT * FROM `tbl_registration` where `Status`=2");
+              $row2=mysqli_fetch_array($res1);
+
+              foreach($res1 as $roww){
+                
+                // echo $row["Username"];
+                 ?>
+                 
+
+             
+
+                 <option value = <?php echo $roww['Reg_id'];?>>    <?php echo $roww['Username']; ?></option>
+
+<?php
+}
+        
+?>
+            
+
+<!-- <option value = <?php //echo $row['Reg_id'];?>>	  <?php //echo $row['Username']; ?></option> -->
+           
+   
+
+
+
+
+
+
+
 		  <?php
 	
 	   $res1=mysqli_query($con,"SELECT * FROM `tbl_barbershop` where `Cat_id`='$x' ");
@@ -158,7 +187,7 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
 		  <?php
 		  }
 		  ?>
-		</select></td> -->
+		</select></td>
           </tr>
           </tr>
 		  

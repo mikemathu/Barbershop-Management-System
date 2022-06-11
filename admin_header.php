@@ -52,7 +52,7 @@ if(!isset($_SESSION['Reg_id']))
       </ul>
    </li>
     <li ><a href='admin_app_aprove.php'><span>Appointments</span></a></li>
-	 <li class='has-sub'><a href='#'><span>Shops</span></a>
+	 <li class='has-sub'><a href='#'><span>BarberShops</span></a>
       <ul>
          <li ><a href='barbershop_add.php'><span>Add Barbershop</span></a> </li>
          <li ><a href='admin_barbershop_view.php'><span>View Barbershops</span></a></li>
@@ -63,20 +63,20 @@ if(!isset($_SESSION['Reg_id']))
       <ul>
          <li ><a href='admin_customer_view.php'><span>Customer Details</span></a> </li>
 		   <li ><a href='schedules.php'><span>Schedules Done</span></a></li>
-		     <li ><a href='transactions.php'><span>Transactions</span></a></li>
+		     <!-- <li ><a href='transactions.php'><span>Transactions</span></a></li> -->
 		    
       </ul>
    </li>
    <li ><a href='admin_feedback_view.php'><span>Feedbacks</span></a></li>
  
-   <li class='has-sub'><a href='#'><span>Items</span></a>
+   <!-- <li class='has-sub'><a href='#'><span>Items</span></a>
       <ul>
        <li ><a href='add_item.php'><span>Add Item</span></a> </li>
          <li ><a href='add_item_category.php'><span>Add Category</span></a></li>
 		 <li ><a href='add_brand.php'><span>Add Brands</span></a></li>
 		  
       </ul>
-   </li>
+   </li> -->
    <li class='has-sub'><a href='#'><span>Profile</span></a>
       <ul>
          <li ><a href='change_password.php'><span>Change Password</span></a> </li>
