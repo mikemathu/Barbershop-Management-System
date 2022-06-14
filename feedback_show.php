@@ -45,7 +45,7 @@ $i++;
 }
 ?>
 </table>
-<br><br><a href="feedback.php">Add Feedback</a>
+<!-- <br><br><a href="feedback.php">Add Feedback</a> -->
 <br>
 <style>
 table {

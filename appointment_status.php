@@ -36,15 +36,18 @@ else
 		
 	while($row=mysqli_fetch_array($res))
 	{
-		// $a=$row['ser_cat_id'];
+		$a=$row['ser_cat_id'];
 		$r=$row['Barbershop_id'];
 	// $res1=mysqli_query($con,"SELECT * FROM `tbl_category` WHERE `ser_cat_id`='$a'");
 	//$row1=mysqli_fetch_array($res1);
 	$res2=mysqli_query($con,"SELECT * FROM `tbl_registration` where `Reg_id`='$r'");
 	$row2=mysqli_fetch_array($res2);
+
+	$res3=mysqli_query($con,"SELECT * FROM `tbl_category` WHERE `ser_cat_id`='$a'");
+	$row3=mysqli_fetch_array($res3);
 	?>
 	<tr><td><center><?php echo $i?></td>
-<td><center><?php //echo $row1['ser_cat_name'];?></td>
+<td><center><?php echo $row3['ser_cat_name'];?></td>
 <td><center><?php echo $row['Date'];?></td>
 <td><center><?php echo $row['Time'];?></td>
 <td><center><?php echo $row2['Username'];?></td>

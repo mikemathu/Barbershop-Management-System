@@ -16,7 +16,7 @@ else
 {
 ?>
 <table width=75%>
-<tr><th>Id</th>
+<tr ><th>Id</th>
 <th>Category name</th>
 <th>Price</th>
 <th>Book Now</th>
@@ -27,18 +27,46 @@ include 'dbconnect.php';
 $x=$_GET['uid'];
 $results=mysqli_query($con,"select * from `tbl_category` where Cat_id in (select Cat_id from `tbl_service_category` where Cat_id='$x')");
 $i=1;
+
 $res=mysqli_query($con,"select * from tbl_service_category where Cat_id='$x'");
 	$row1=mysqli_fetch_array($res);
 	echo "<h1><center><font color=green>".$row1['Cat_name']."</font></h1><br>";
 while($row=mysqli_fetch_array($results))
 {
+	// echo $row['ser_cat_id'];
 	
-echo "<tr><td>$i</td>
-	<td>$row[ser_cat_name]</td>
-	<td>$row[ser_cat_price]</td>
-	<td>
-	<a href='appointment_add.php?uid=$row[ser_cat_id]'><img src=images/booknowbutton.png width=70px></a>
-	</td></tr>";	
+echo "<tr ><td>$i</td>
+	<td style=' padding-bottom:50px; padding-top:50px;'>$row[ser_cat_name]</td>
+	<td>$row[ser_cat_price]</td> ";
+
+
+	$cat_id=$row['ser_cat_id'];
+
+	$res=mysqli_query($con,"SELECT * FROM `tbl_appointment` WHERE `ser_cat_id`=$cat_id and `Status`='1'");
+	$row2=mysqli_fetch_array($res);
+
+	if(empty($row2))
+	{
+		echo "
+		 <td>
+	 	<a href='appointment_add.php?uid=$row[ser_cat_id]'><img src=images/booknowbutton.png width=70px></a>
+	 </td>
+		
+		";
+	}
+	else
+	{
+		echo "
+		<td>
+		<small style='color:red;' >Aready Booked</small>
+	</td>
+	   
+	   ";
+	}
+	
+	
+	
+	// </tr>";	
 	$i++;
 	
 }}

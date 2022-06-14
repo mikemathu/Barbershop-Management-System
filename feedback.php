@@ -60,7 +60,7 @@ inline: true
             {
 
                 echo "
-                <td><input type='text'   name='barbershop_id' id='barbershop_id' value=$row1[Barbershop_id] readonly='readonly'></td>
+                <td><input type='hidden'   name='barbershop_id' id='barbershop_id' value=$row1[Barbershop_id] readonly='readonly'></td>
                 ";
    
                
@@ -73,7 +73,7 @@ inline: true
         ?>
         
           <!-- <td><b>App_ID</b></td> -->
-          <td><input type="text"   name="application_id" id="application_id" value="<?php echo $y ?>"readonly="readonly"></td>
+          <td><input type="hidden"    name="application_id" id="application_id" value="<?php echo $y ?>"readonly="readonly"></td>
           </tr>
 
           <tr>

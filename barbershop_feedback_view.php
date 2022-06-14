@@ -10,7 +10,7 @@ include 'barbershop_header.php';
 <th>CUSTOMER NAME</th>
 <th>DATE</th>
 <th>SERVICE</th>
-<th>FEEDBACK</th>
+<th>COMMENT</th>
 <th></th>
 </tr>
 <?php
