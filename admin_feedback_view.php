@@ -19,7 +19,7 @@ else
 <th>NAME</th>
 <th>DATE</th>
 <th>FEEDBACK</th>
-<th>STATUS</th></tr>
+<th>ACTION</th></tr>
 <?php
 include 'dbconnect.php';
 $a=$_SESSION['Reg_id'];
@@ -36,7 +36,10 @@ $a=$_SESSION['Reg_id'];
 <td><center><?php echo $row1['Username'];?></td>
 <td><center><?php echo $row['Date'];?></td>
 <td><center><?php echo $row['Feed_msg'];?></td>
-<td><center><a href="mark_read.php?uid=<?php echo $row['Feed_id'];?>" onclick="return confirm('Mark as read??')"><img src="images/symbol_check.png" width="30px"></a></td></tr>
+<td><center><a href="mark_read.php?uid=<?php echo $row['Feed_id'];?>" onclick="return confirm('Are you sure you ant to delete?')">
+<!-- <img src="images/symbol_check.png" width="30px"> -->
+Delete
+</a></td></tr>
 <?php
 $i++;
 	}

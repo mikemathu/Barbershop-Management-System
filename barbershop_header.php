@@ -66,6 +66,7 @@ if(!isset($_SESSION['Reg_id']))
 		  <li ><a href='leave_status.php'><span>Leave Status</span></a></li>   
       </ul>
    </li> -->
+    <li > <a href='barbershop_feedback_view.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Feedback</span></a></li>
    <li class='has-sub'><a href='#'><span>Settings</span></a>
       <ul>
          <li ><a href='barbershop_change_pass.php'><span>Change Password</span></a></li>

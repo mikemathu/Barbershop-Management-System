@@ -84,7 +84,7 @@ if(!isset($_SESSION['Reg_id']))
  <li ><a href='order_view.php?uid=<?php //echo $_SESSION['Reg_id'];?>'><span>Orders</span></a></li> 		 
       </ul>
    </li> -->
-    <li > <a href='feedback.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Feedback</span></a></li>
+    <!-- <li > <a href='feedback.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Feedback</span></a></li> -->
   <li class='has-sub'><a href='#'><span>Settings</span></a>
       <ul>
 	  <li ><a href='customer_change_pass.php'><span>Change Password</span></a></li>
