@@ -23,7 +23,7 @@ else
 <th>Service Name</th>
 <th>Price</th>
 <th>View Details</th>
-<th>Pay</th>
+<th>Feedback</th>
 </tr>
 <?php
 include 'dbconnect.php';
@@ -35,17 +35,46 @@ while($row=mysqli_fetch_array($results))
 	$_SESSION['Reg_id']=$y;
 	$res=mysqli_query($con,"select * from `tbl_category` where `ser_cat_id`='$i'");
 	$row1=mysqli_fetch_array($res);
-echo "<tr><td>$x</td>
+echo "
+
+<input name='App_id' hidden value='$row[App_id]' href=feedback.php?uid=$row[App_id] />
+
+<tr><td>$x</td>
 <td>$row1[ser_cat_name]</td>
 <td>$row1[ser_cat_price]</td>
-<td><a href=viewdetails_bill.php?uid=$row[App_id]>View Details</a></td></td>
-<td><a href=payment_bill.php?uid=$row[App_id]>Pay</a></td></td>";
+<td><a href=viewdetails_bill.php?uid=$row[App_id]>View Details</a></td></td>";
 ?>
+
+<?php
+$res1=mysqli_query($con,"select * from `tbl_feedback` where `App_id`=$row[App_id] ");
+$row1=mysqli_fetch_array($res1);
+if(empty($row1))
+{
+    echo "
+<td><a href=feedback.php?uid=$row[App_id]>Review</a></td></td>";
+
+
+
+	
+}
+ else {
+    echo "<td><p style='color:red;'>You Already reviewed</p></td>
+    </td>";
+ }
+
+
+
+
+
+
+?>
+ <!-- <td><a href=feedback.php?uid=payment_bill.php?uid=$row[App_id]>Pay</a></td></td>"; -->
+ <!-- <td><a href=feedback.php?uid=$_SESSION[Reg_id];>Review</a></td></td>"; -->
 <?php 
 $x++;
 }
 ?>
-
+</form>
 </table><br><br>
 <?php
 }

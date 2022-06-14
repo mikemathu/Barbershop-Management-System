@@ -67,6 +67,8 @@ if(!isset($_SESSION['Reg_id']))
 		 <li ><a href='view_bill.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>View Bills</span></a></li>
       </ul>
    </li>
+
+   <li><a href='customer_barbershop_view.php'><span>BarberShops</span></a> </li>
 	
    <!-- <li class='has-sub'><a href='#'><span>Customers</span></a>
       <ul>

@@ -5,6 +5,7 @@ $uname=$_SESSION['username'];
 $sel="select `Reg_id` from `tbl_registration` Where `Email`='$uname'";
 $qry=mysqli_query($con,$sel);
 $ans=mysqli_fetch_array($qry); 
+$y=$_GET['uid'];
 ?>
 <html>
 <head><center><font color="green">
@@ -49,9 +50,35 @@ inline: true
 <form name="Feedback.php" action="feedback_action.php" method="post" onSubmit="return validate()">
 <body>
       <table>
+      <tr>
+
+      <?php
+
+            $res1=mysqli_query($con,"select * from `tbl_appointment` where `App_id`='$y' ");
+            $row1=mysqli_fetch_array($res1);
+            if(!empty($row1))
+            {
+
+                echo "
+                <td><input type='text'   name='barbershop_id' id='barbershop_id' value=$row1[Barbershop_id] readonly='readonly'></td>
+                ";
+   
+               
+            }
+           
+
+               //         <td><b>Barbershop ID</b></td>
+        //   <td><input type='text'   name='text_barbershop_id' id='text_barbershop_id' value='$row1[App_id] 'readonly='readonly'></td>
+
+        ?>
+        
+          <!-- <td><b>App_ID</b></td> -->
+          <td><input type="text"   name="application_id" id="application_id" value="<?php echo $y ?>"readonly="readonly"></td>
+          </tr>
+
           <tr>
           <td><b>Feedback_date</b></td>
-          <td><input type="text" name="txt_Feedback_Date" id="txt_Feedback_Date" value="<?php echo date("Y/m/d") ?>"readonly="readonly"></td>
+          <td><input type="text"  name="txt_Feedback_Date" id="txt_Feedback_Date" value="<?php echo date("Y/m/d") ?>"readonly="readonly"></td>
           </tr>
           <tr>
           <td><b>Feedback</b></td>
