@@ -183,7 +183,7 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
 		  $row3=mysqli_fetch_array($res);
 	   
 		  ?>
-		  <option value = <?php echo $row3['Reg_id'];?>>	  <?php echo $row3['F_name']; ?></option>
+		  <!-- <option value = <?php //echo $row3['Reg_id'];?>>	  <?php //echo $row3['Username']; ?></option> -->
 		  <?php
 		  }
 		  ?>

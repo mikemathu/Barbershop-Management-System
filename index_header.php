@@ -58,6 +58,8 @@ if(!isset($_SESSION['Reg_id']))
 </div>
 <div class="strip"> </div>
 
+
+
  <div class="main">
     <div class="content" style="    padding: 106px 0;">
     

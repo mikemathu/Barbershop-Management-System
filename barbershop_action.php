@@ -38,9 +38,11 @@
 	//    $varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Cat_id`, `Qualification`,
 	//    `University`, `Year_of_pass`, `Experience`) VALUES
 	// ('$z')");
-	$varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Cat_id`, `Days_of_operation`, `Opening_time`,
-	`Closing_time`, `House_name`) VALUES
- ('$z','$var_specialization','$var_days_of_operation','$var_opening_time','$var_closing_time', '$var_house_name')");
+// 	$varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Cat_id`, `Days_of_operation`, `Opening_time`,
+// 	`Closing_time`, `House_name`) VALUES
+//  ('$z','$var_specialization','$var_days_of_operation','$var_opening_time','$var_closing_time', '$var_house_name')");
+	$varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `House_name`) VALUES
+ ('$z', '$var_house_name')");
 
 	//    $varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Days_of_operation`, `Opening_time`,
 	//    `Closing_time`) VALUES

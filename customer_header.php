@@ -70,8 +70,8 @@ if(!isset($_SESSION['Reg_id']))
 	
    <!-- <li class='has-sub'><a href='#'><span>Customers</span></a>
       <ul>
-         <li ><a href='Customer_home.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Customer Details</span></a> </li>
-         <li ><a href='customer_edit.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Edit Profile</span></a></li> 
+         <li ><a href='Customer_home.php?uid=<?php //echo $_SESSION['Reg_id'];?>'><span>Customer Details</span></a> </li>
+         <li ><a href='customer_edit.php?uid=<?php //echo $_SESSION['Reg_id'];?>'><span>Edit Profile</span></a></li> 
       </ul>
    </li> -->
  

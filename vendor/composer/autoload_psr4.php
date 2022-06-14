@@ -6,6 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'apimatic\\jsonmapper\\' => array($vendorDir . '/apimatic/jsonmapper/src'),
-    'ReleansAPILib\\' => array($vendorDir . '/releans/releansapi/src'),
+    'MessageBird\\' => array($vendorDir . '/messagebird/php-rest-api/src/MessageBird'),
+    'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
 );

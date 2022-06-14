@@ -4,37 +4,27 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb22a35ba0bf7eebc71ce50fdc2a59dab
+class ComposerStaticInit354ae02c0c3cfa2b1945ab5baf8909c1
 {
     public static $prefixLengthsPsr4 = array (
-        'a' => 
+        'M' => 
         array (
-            'apimatic\\jsonmapper\\' => 20,
+            'MessageBird\\' => 12,
         ),
-        'R' => 
+        'F' => 
         array (
-            'ReleansAPILib\\' => 14,
+            'Firebase\\JWT\\' => 13,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'apimatic\\jsonmapper\\' => 
+        'MessageBird\\' => 
         array (
-            0 => __DIR__ . '/..' . '/apimatic/jsonmapper/src',
+            0 => __DIR__ . '/..' . '/messagebird/php-rest-api/src/MessageBird',
         ),
-        'ReleansAPILib\\' => 
+        'Firebase\\JWT\\' => 
         array (
-            0 => __DIR__ . '/..' . '/releans/releansapi/src',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'U' => 
-        array (
-            'Unirest\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/mashape/unirest-php/src',
-            ),
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
     );
 
@@ -45,10 +35,9 @@ class ComposerStaticInitb22a35ba0bf7eebc71ce50fdc2a59dab
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb22a35ba0bf7eebc71ce50fdc2a59dab::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb22a35ba0bf7eebc71ce50fdc2a59dab::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb22a35ba0bf7eebc71ce50fdc2a59dab::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitb22a35ba0bf7eebc71ce50fdc2a59dab::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit354ae02c0c3cfa2b1945ab5baf8909c1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit354ae02c0c3cfa2b1945ab5baf8909c1::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit354ae02c0c3cfa2b1945ab5baf8909c1::$classMap;
 
         }, null, ClassLoader::class);
     }

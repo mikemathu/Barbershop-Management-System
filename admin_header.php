@@ -45,13 +45,16 @@ if(!isset($_SESSION['Reg_id']))
 <ul>
 
    <li ><a href='admin_home.php'><span>Home</span></a></li>
+   <li ><a href='admin_app_aprove.php'><span>Appointments</span></a></li>
+   <li ><a href='admin_feedback_view.php'><span>Feedbacks</span></a></li>
+
+
    <li class='has-sub'><a href='#'><span>Services</span></a>
       <ul>
          <li ><a href='add_service.php'><span>Add Services</span></a></li>
 		 <li ><a href='add_category.php'><span>Add Service Categories</span></a></li>
       </ul>
    </li>
-    <li ><a href='admin_app_aprove.php'><span>Appointments</span></a></li>
 	 <li class='has-sub'><a href='#'><span>BarberShops</span></a>
       <ul>
          <li ><a href='barbershop_add.php'><span>Add Barbershop</span></a> </li>
@@ -67,7 +70,6 @@ if(!isset($_SESSION['Reg_id']))
 		    
       </ul>
    </li>
-   <li ><a href='admin_feedback_view.php'><span>Feedbacks</span></a></li>
  
    <!-- <li class='has-sub'><a href='#'><span>Items</span></a>
       <ul>

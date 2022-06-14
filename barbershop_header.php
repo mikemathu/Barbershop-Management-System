@@ -47,15 +47,16 @@ if(!isset($_SESSION['Reg_id']))
 	
  
 	
+  
+ <li class='has-sub'><a href='#'><span>Appointments</span></a>
+      <ul>
+		 <li ><a href='barbershop_appointment_status.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Appointment Schedules</span></a></li>
+      </ul>
+   </li>
    <li class='has-sub'><a href='#'><span>Profile</span></a>
       <ul>
          <li ><a href='barbershop_home.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>View Profile</span></a> </li>
          <li ><a href='barbershop_edit.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Edit Profile</span></a></li> 
-      </ul>
-   </li>
- <li class='has-sub'><a href='#'><span>Appointments</span></a>
-      <ul>
-		 <li ><a href='barbershop_appointment_status.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Appointment Schedules</span></a></li>
       </ul>
    </li>
   
@@ -68,6 +69,7 @@ if(!isset($_SESSION['Reg_id']))
    <li class='has-sub'><a href='#'><span>Settings</span></a>
       <ul>
          <li ><a href='barbershop_change_pass.php'><span>Change Password</span></a></li>
+         <li ><a href='barbershop_change_msg.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Change Message</span></a></li>
 		  <li ><a href='logout.php'><span>Logout</span></a></li>   
       </ul>
    </li>
@@ -75,6 +77,9 @@ if(!isset($_SESSION['Reg_id']))
 </div>
 </div>
 </div>
+
+<h4 style="text-align: center;">BARBERSHOP DASHBOARD</h3>
+
  <div class="main">
     <div class="content" style="    padding: 111px 0;">
     

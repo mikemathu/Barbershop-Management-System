@@ -36,7 +36,9 @@ while($row=mysqli_fetch_array($results))
 echo "<tr><td>$i</td>
 	<td>$row[ser_cat_name]</td>
 	<td>$row[ser_cat_price]</td>
-	<td><a href='appointment_add.php?uid=$row[ser_cat_id];'><img src=images/booknowbutton.png width=70px></a></td></tr>";	
+	<td>
+	<a href='appointment_add.php?uid=$row[ser_cat_id]'><img src=images/booknowbutton.png width=70px></a>
+	</td></tr>";	
 	$i++;
 	
 }}
