@@ -38,7 +38,7 @@ if(isset($_POST['submit']))
  	$uname=$_POST['username'];
  	$pwd=$_POST['password'];
 	$p=md5($pwd);
-	$a=mysqli_query($con,"select * from `tbl_login` where `Username`='$uname' and `Password`='$p' or `Password`='$pwd'");
+	$a=mysqli_query($con,"select * from `tbl_login` where `Username`='$uname' and `Password`='$p' or `Password`='$pwd' ");
 	$row=mysqli_fetch_array($a);
 	if(!empty($row))
 	{

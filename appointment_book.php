@@ -23,6 +23,7 @@ $custname=$ans['Username'];
 
 $uid=$_GET['uid'];
 
+// echo $uid;
 ?>
 <html>
 <head><center>
@@ -88,7 +89,7 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
  <script>$(function(){$('#time').timepicker();});</script>
  
 
-<form name="Package_booking_Add.php" action="appointment_action.php" method="post" onSubmit="return validate()">
+<form name="Package_booking_Add.php" action="appointment_booking_action.php" method="post" onSubmit="return validate()">
 <body>
       <table>
       <tr>
@@ -114,105 +115,92 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
           </td>
           </tr>-->
          <?php
-      $kid=$_GET['uid'];
-      $var="select * from tbl_category where ser_cat_id='$kid'";
-      $result=mysqli_query($con,$var);
-        while($row1=mysqli_fetch_array($result))
-          { 
-	  $x=$row1['Cat_id'];
-	  $_SESSION['Cat_id']=$x;?>
+    //   $kid=$_GET['uid'];
+    //   $var="select * from tbl_category where ser_cat_id='$kid'";
+    //   $var="select * from tbl_category";
+    //   $result=mysqli_query($con,$var);
+        // while($row1=mysqli_fetch_array($result))
+        //   { 
+	//   $x=$row1['Cat_id'];
+	  //$_SESSION['Cat_id']=$x;?>
 	<tr>
-          <td><b>Service</b></td>
-          <td><input type="text" name="service" id="service" value="<?php echo $row1['ser_cat_name'];?>"readonly="readonly"></td>
-          </tr>
-          <tr>
-            <td><b>Amount</b></td>
-            <td><input type="text" name="txt_Amount" id="txt_Amount" value="<?php echo $row1['ser_cat_price'];?>"readonly="readonly"></td>
-          </tr>
-          <tr>
-            <td><b>Appoinment_datee</b></td>
-            <td><input type="date" name="txt_Appoinment_Date" id="txt_Appoinment_Date" value="<?php echo date("Y-m-d")?>" min="<?php echo date("Y-m-d")?>" required></td>
-          </tr>
 
 
-
-
-<?php
-                //Get dates and times of bookings in database
-      $getAppointments = "SELECT `Time` FROM `tbl_appointment`";
-      $getAppointmentsResult = mysqli_query($con, $getAppointments);
-      $appointmentsArray = array();
-      if (mysqli_num_rows($getAppointmentsResult) > 0){
-          while ($row = mysqli_fetch_assoc($getAppointmentsResult)) {
-              $dateTime = $row["Time"];
-              array_push($appointmentsArray,$row['Time']);
-              // echo $dateTime;            
-          }
-
-
-          ?>
-
-<!-- <tr>
-            <td><b>Appoinment_time</b></td>
-            <td><input type="time" name="time" id="time"  value='$dateTime'   required/></td></tr> -->
-
-          <?php
-      } 
-
-?>
-    <script>
-    var dateToday = new Date(); 
-    var hour = dateToday.getHours();
-
-        jQuery(function($) {
-            $("#datepicker").datetimepicker({
-                //set office hours
-                timeFormat: 'HH:00',
-                hour: hour+1,
-                stepping: 15,
-                beforeShowDay: $.datepicker.noWeekends,
-                minTime: '09:00:00',
-                maxTime: '16:00:00',
-                dateFormat: 'dd-mm-yy',
-                minuteStep: 15,
-                minDate: dateToday
-                
-            });
-        });
-      </script>
-
-          
-          <tr>
-            <td><b>Appoinment_time</b></td>
-            <td><input type="time" name="time" id="time"    required/></td></tr>
-
-
-
-
-
-
-        
-            <td><b>Barbershop Available</b></td> 
-                <td><select name="txt_staff">
+    <td><b>Services</b></td> 
+                <td><select name="service">
             <option>--Select--</option>
             
             <?php
         
-              $res1=mysqli_query($con,"SELECT * FROM `tbl_registration` where `Status`=2");
+              $res1=mysqli_query($con,"SELECT * FROM `tbl_category`");
               $row2=mysqli_fetch_array($res1);
 
               foreach($res1 as $roww){
                 
                 // echo $row["Username"];
+                 ?>               
+
+             
+              <!-- <form action="appointment_booking_action.php" method="POST" > -->
+                 <option value = <?php echo $roww['ser_cat_id'];?>>    <?php echo $roww['ser_cat_name']; ?></option>
+                 <!-- <input type="text" name=""  value=" <?php echo $row2['Username']; ?>" readonly > -->
+              <!-- </form> -->
+
+<?php
+}
+        
+?>
+</td>
+
+
+
+
+
+          <!-- <td><b>Service</b></td>
+          <td><input type="text" name="service" id="service" value="<?php //echo $row1['ser_cat_name'];?>"readonly="readonly"></td> -->
+          </tr>
+          <!-- <tr>
+             <td><b>Amount</b></td>
+            <td><input type="text" name="txt_Amount" id="txt_Amount" value="<?php //echo $row1['ser_cat_price'];?>"></td> 
+          </tr> -->
+          <tr>
+            <td><b>Appoinment_date</b></td>
+            <td><input type="date" name="txt_Appoinment_Date" id="txt_Appoinment_Date" value="<?php echo date("Y-m-d")?>" min="<?php echo date("Y-m-d")?>" required></td>
+          </tr>
+          
+          <tr>
+            <td><b>Appoinment_time</b></td>
+            <td><input type="time" name="time" id="time"    required/></td></tr>
+        
+            <td><b>Barbershop </b></td> 
+                
+                    
+            <!-- <option>--Select--</option> -->
+            
+            <?php
+        
+              $res1=mysqli_query($con,"SELECT * FROM `tbl_registration` where `Reg_id`=$uid");
+              $row2=mysqli_fetch_array($res1);
+
+            //   foreach($res1 as $roww){
+                
+                // echo $row["Username"];
                  ?>
+
+<td>
+  <form action="appointment_booking_action.php" method="POST" >
+    <input type="text" name=""  value=" <?php echo $row2['Username']; ?>" readonly >
+    <input type="hidden" name="berbershop_name"  value=" <?php echo $row2['Reg_id']; ?>" readonly >
+  </form>
+</td>
                  
 
              
 
-                 <option value = <?php echo $roww['Reg_id'];?>>    <?php echo $roww['Username']; ?></option>
+                 <!-- <option value = <?php ///echo $row2['Reg_id'];?>>    <?php //echo $row2['Username']; ?></option> -->
 
 <?php
-}
+// }
         
 ?>
             
@@ -229,24 +217,25 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
 
 		  <?php
 	
-	   $res1=mysqli_query($con,"SELECT * FROM `tbl_barbershop` where `Cat_id`='$x' ");
-		 while($row2=mysqli_fetch_array($res1))
-		  {  
-	  $y=$row2['Reg_id'];
-	   $res=mysqli_query($con,"SELECT * FROM `tbl_registration` where `Reg_id`='$y'");
-		  $row3=mysqli_fetch_array($res);
+	//    $res1=mysqli_query($con,"SELECT * FROM `tbl_barbershop` where `Cat_id`='$x' ");
+	// 	 while($row2=mysqli_fetch_array($res1))
+	// 	  {  
+	//   $y=$row2['Reg_id'];
+	//    $res=mysqli_query($con,"SELECT * FROM `tbl_registration` where `Reg_id`='$y'");
+	// 	  $row3=mysqli_fetch_array($res);
 	   
 		  ?>
 		  <!-- <option value = <?php //echo $row3['Reg_id'];?>>	  <?php //echo $row3['Username']; ?></option> -->
 		  <?php
-		  }
+		//   }
 		  ?>
-		</select></td>
+		
+    
           </tr>
           </tr>
 		  
 		  <?php
-		  }
+		//   }
 		  ?>
           <tr>
           <td></td>

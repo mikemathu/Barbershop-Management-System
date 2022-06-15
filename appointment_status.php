@@ -6,15 +6,15 @@ include 'customer_header.php';
 <h1><font color="green"><center>APPOINTMENT STATUS</font></h1><br>
 <?php
 //echo "$_SESSION[Reg_id]";
-$res1=mysqli_query($con,"SELECT * FROM `tbl_appointment` WHERE `Reg_no`='$_SESSION[Reg_id]' and `Status`!='2' and `Status`!='5'");
+// $res1=mysqli_query($con,"SELECT * FROM `tbl_appointment` WHERE `Reg_no`='$_SESSION[Reg_id]' and `Status`!='2' and `Status`!='5'");
 // $res1=mysqli_query($con,"SELECT * FROM `tbl_appointment` WHERE `Reg_no`='$_SESSION[Reg_id]'");
-$row1=mysqli_fetch_array($res1);
-if(empty($row1))
-{
-	echo "<br><br><center><font color=red size=3>No Services Booked !!!</font></center>";
-}
-else
-{
+// $row1=mysqli_fetch_array($res1);
+// if(empty($row1))
+// {
+// 	echo "<br><br><center><font color=red size=3>No Services Booked !!!</font></center>";
+// }
+// else
+// {
 ?>
 <table>
 <table border=2 width=70%>
@@ -45,6 +45,7 @@ else
 
 	$res3=mysqli_query($con,"SELECT * FROM `tbl_category` WHERE `ser_cat_id`='$a'");
 	$row3=mysqli_fetch_array($res3);
+	// echo $a;
 	?>
 	<tr><td><center><?php echo $i?></td>
 <td><center><?php echo $row3['ser_cat_name'];?></td>
@@ -77,7 +78,8 @@ else if($s==5 || $s==4)
 <?php
 $i++;
 	
-}}
+}
+// }
 ?>
 	
 

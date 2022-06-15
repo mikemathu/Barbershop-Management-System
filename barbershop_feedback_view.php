@@ -18,10 +18,14 @@ include 'dbconnect.php';
 $kid=$_GET['uid'];
 // $r=mysqli_query($con,"Select * from `tbl_barbershop` where `Reg_id`='$kid'");
 $r=mysqli_query($con,"Select * from `tbl_feedback` where `Barbershop_id`=$kid");
-// $r1=mysqli_fetch_array($r);
+$r1=mysqli_fetch_array($r);
 // $a=$_SESSION['Reg_id'];
 // // $x=$r1['Cat_id'];
 // $res=mysqli_query($con,"SELECT * FROM `tbl_appointment` where `Barbershop_id`='$kid' and `Status`='1' and `Barbershop_id`='$kid'");
+if(!empty($r1))
+{
+    // echo "<br><br><center><font color=red size=3>No Appointments Yet !!!</font></center>";
+
 	$i=1;	
 	while($row=mysqli_fetch_array($r))
 	{
@@ -42,6 +46,9 @@ $r=mysqli_query($con,"Select * from `tbl_feedback` where `Barbershop_id`=$kid");
         {
 		$a=$row['Reg_id'];
 		$b=$row['Barbershop_id'];
+
+   
+
 		$c=$row['App_id'];
         // echo $c;
 	$res1=mysqli_query($con,"SELECT * FROM `tbl_registration` WHERE `Reg_id`='$a'");
@@ -60,6 +67,7 @@ $r=mysqli_query($con,"Select * from `tbl_feedback` where `Barbershop_id`=$kid");
 <td><center><?php echo $row3['ser_cat_name'];?></td>
 <td><center><?php echo $row['Feed_msg'];?></td>
 <?php
+    // }
 // $s=$row['Status'];
 // if($s==1)
 // {
@@ -78,7 +86,11 @@ $r=mysqli_query($con,"Select * from `tbl_feedback` where `Barbershop_id`=$kid");
 $i++;
 }
 
-// }
+}
+else{
+     echo "<br><br><td ><center ><font color=red size=3>No Appointments Yet !!!</font></td></center>";
+
+}
 ?>
 <style>
 table {
