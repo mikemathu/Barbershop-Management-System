@@ -17,12 +17,18 @@ include("index_header.php");
          		<div class="slider_left">
 				  <div class="wmuSlider example2">
 					<div class="wmuSliderWrapper">
-					<article> <img src="images/5.jpg" alt="" height="350px" /> </article>
+					<!-- <article> <img src="images/5.jpg" alt="" height="350px" /> </article>
 					<article> <img src="images/61.jpg" alt="" height="350px" /> </article>
 					<article> <img src="images/4.jpg" alt="" height="350px" />  </article>
 					<article> <img src="images/54.jpg" alt="" height="350px" />  </article>
 					<article> <img src="images/banner1.jpg" alt="" height="350px" />  </article>
-					<article> <img src="images/52.jpg" alt="" height="350px" />  </article>
+					<article> <img src="images/52.jpg" alt="" height="350px" />  </article> -->
+
+					<article> <img src="images/New/Adjusted/4a.jpg" alt="" height="350px" /> </article>
+					<article> <img src="images/New/Adjusted/5a.jpg" alt="" height="350px" /> </article>
+					<article> <img src="images/New/Adjusted/6a.jpg" alt="" height="350px" />  </article>
+					<article> <img src="images/New/Adjusted/21a.jpg" alt="" height="350px" />  </article>
+					<article> <img src="images/New/Adjusted/26a.jpg" alt="" height="350px" />  </article>
 					</div>	
 					<script src="js/jquery.wmuSlider.js"></script> 
 					<script type="text/javascript" src="js/modernizr.custom.min.js"></script> 
@@ -36,7 +42,8 @@ include("index_header.php");
 				 </div>
 				</div>				
 				   <div class="slider_right">
-				      <img src="images/9.jpg" alt="" height="350px" />
+				      <!-- <img src="images/9.jpg" alt="" height="350px" /> -->
+					  <img src="images/New/Adjusted/14b.jpg" alt="" height="350px" />
 				         <div class="sliderright-text">
 				       	  <h3><span>New Beauty</span><br />Tips</h3>
 				       </div>
@@ -62,19 +69,22 @@ include("index_header.php");
 				<h2>Latest Products</h2>
 				<div class="section group">
 				<div class="products_1_of_3">
-					  <img src="images/62.jpg" alt="" />
+					  <!-- <img src="images/62.jpg" alt="" /> -->
+					  <img src="images/New/Adjusted/33a.jpg" alt="" />
 					  <h3>L'Oreal Paris Infallible Lipstick</h3>
 					  <p>The L'Oreal Paris Infallible Lipstick 741 Bold Bordeaux nourishes your lips and makes them soft and supple. It comes with a rich natural finish that offers a glamorous look. A L'Oreal Paris Kajal Marique Bold comes free with this gloss. Benefits: . Non-Fading . Makes your lips feel soft and look luscious . Easy to use</p>
 		
 				</div>
 				<div class="products_1_of_3">
-					   <img src="images/63.jpg" alt="" />
+					   <!-- <img src="images/63.jpg" alt="" /> -->
+					   <img src="images/New/Adjusted/18a.jpg" alt="" />
 					  <h3>Lakme Rose Face Powder, Soft Pink, 40g</h3>
 					  <p>Bought to you from the house of Lakme Classics, The Lakme Rose Powder is a classic must-have. Blush your cheeks with this Lakme Rose Powder which has a light rosy fragrance & sunscreen to protect your soft, peachy skin. The Lakme Rose Powder comes in two warm pink shades which you can pick according to your skin type and occasion.</p>
 				
 				</div>
 				<div class="products_1_of_3">
-					   <img src="images/64.jpg" alt="" />
+					   <!-- <img src="images/64.jpg" alt="" /> -->
+					   <img src="images/New/Adjusted/29a.jpg" alt="" />
 					  <h3>Adbeni-Makeup-Kit</h3>
 					  <p>Good Choice India Provides You Combo Makeup Sets "1 Foundation 1 Apricot Scrub 1 Kajal 5in1 Makeup Brush 1 Compact Powder 1 Eye Lipliner", this Is a Special Gift for Woman & Girls Case size: Combo Makeup Set (convenient to carry outdoor)Combo Makeup Sets by copy is the All in one set that has all you need for a professional makeup each individual makeup is manufactured with high quality materials and is offered at a very affordable price why pay more at edpartment store when you can have them all at one low price. Enjoy it</p>
 

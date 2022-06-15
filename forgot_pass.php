@@ -16,7 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="header_top">
 			<div class="wrap">
 			 <div class="logo">
-						<a href="index.php"><img src="images/47.png" alt="" /></a>
+						<a href="index.php"><img src="images/New/Adjusted/Thelogo7.png" /></a>
 					</div>
 			    <div class="call">
 			    	<p><img src="images/45.png" alt="" />Call US: 0711-222-333</p>

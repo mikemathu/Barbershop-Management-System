@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <head>
-<title>Free Reflection Salon & span Website Template | Home :: w3layouts</title>
+<title>The Barbers Arena | Home   </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
@@ -23,7 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="header_top">
 			<div class="wrap">
 			 <div class="logo">
-						<a href="index.html"><img src="images/47.png" alt="" /></a>
+						<a href="index.html"><img src="images/New/Adjusted/Thelogo7.png" /></a>
 					</div>
 			    <div class="call">
 			    	<p><img src="images/45.png" alt="" />Call US: 0711-222-333</p>

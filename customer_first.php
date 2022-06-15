@@ -12,10 +12,14 @@ include 'customer_header.php';
          		<div class="slider_left">
 				  <div class="wmuSlider example2">
 					<div class="wmuSliderWrapper">
-					<article> <img src="images/1 (2).jpg" alt="" /> </article>
+					<!-- <article> <img src="images/1 (2).jpg" alt="" /> </article>
 					<article> <img src="images/2 (2).jpg" alt="" /> </article>
 					<article> <img src="images/4 (2).jpg" alt="" />  </article>
-					<article> <img src="images/3 (2).jpg" alt="" />  </article>
+					<article> <img src="images/3 (2).jpg" alt="" />  </article> -->
+					<article> <img src="images/New/Adjusted/11a.png" alt="" /> </article>
+					<article> <img src="images/New/Adjusted/28a.png" alt="" /> </article>
+					<article> <img src="images/New/Adjusted/19a.png" alt="" />  </article>
+					<article> <img src="images/New/Adjusted/22a.png" alt="" />  </article>
 					</div>	
 					<script src="js/jquery.wmuSlider.js"></script> 
 					<script type="text/javascript" src="js/modernizr.custom.min.js"></script> 
@@ -29,7 +33,8 @@ include 'customer_header.php';
 				 </div>
 				</div>				
 				   <div class="slider_right">
-				      <img src="images/slideimg-1.jpg" alt="" />
+				      <!-- <img src="images/slideimg-1.jpg" alt="" /> -->
+					  <img src="images/New/Adjusted/13e.png" alt="" style="border-radius: 50px; height: 575px;" />
 				         <div class="sliderright-text">
 				       	  <h3><span>New Facial</span><br />Treatments</h3>
 				       </div>
