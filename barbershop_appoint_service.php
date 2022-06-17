@@ -14,7 +14,7 @@ include 'dbconnect.php';
   require 'vendor/autoload.php';
   if(isset($_POST['submit'])){
 
-//Handles sms
+//Handles sms by Message bird
     $recipient = $_POST['recipient'];
     $sms = $_POST['sms'];	
 
