@@ -34,9 +34,9 @@ while($rw=mysqli_fetch_array($resu))
 {
 $f=1; 
 $ti=$time;
-$a1=strtotime("-19 minutes",strtotime($ti));
+$a1=strtotime("-20 minutes",strtotime($ti));
 $a2=date("H:i",$a1);
-$b1=strtotime("+19 minutes",strtotime($ti));
+$b1=strtotime("+20 minutes",strtotime($ti));
 $b2=date("H:i",$b1);
  	
 	  $sel1="select * from `tbl_appointment` where `Time` BETWEEN '$a2' AND '$b2'";

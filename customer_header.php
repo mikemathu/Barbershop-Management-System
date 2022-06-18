@@ -70,20 +70,6 @@ if(!isset($_SESSION['Reg_id']))
 
    <li><a href='customer_barbershop_view.php'><span>BarberShops</span></a> </li>
 	
-   <!-- <li class='has-sub'><a href='#'><span>Customers</span></a>
-      <ul>
-         <li ><a href='Customer_home.php?uid=<?php //echo $_SESSION['Reg_id'];?>'><span>Customer Details</span></a> </li>
-         <li ><a href='customer_edit.php?uid=<?php //echo $_SESSION['Reg_id'];?>'><span>Edit Profile</span></a></li> 
-      </ul>
-   </li> -->
- 
-   <!-- <li class='has-sub'><a href='#'><span>Items</span></a>
-      <ul>
-         <li ><a href='customer_item_select.php'><span>View Item</span></a></li>
-		 <li ><a href='cart_view.php?uid=<?php //echo $_SESSION['Reg_id'];?>'><span>Cart</span></a></li> 
- <li ><a href='order_view.php?uid=<?php //echo $_SESSION['Reg_id'];?>'><span>Orders</span></a></li> 		 
-      </ul>
-   </li> -->
     <!-- <li > <a href='feedback.php?uid=<?php echo $_SESSION['Reg_id'];?>'><span>Feedback</span></a></li> -->
   <li class='has-sub'><a href='#'><span>Settings</span></a>
       <ul>

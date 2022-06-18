@@ -65,20 +65,11 @@ if(!isset($_SESSION['Reg_id']))
    <li class='has-sub'><a href='#'><span>Customers</span></a>
       <ul>
          <li ><a href='admin_customer_view.php'><span>Customer Details</span></a> </li>
-		   <li ><a href='schedules.php'><span>Schedules Done</span></a></li>
+		   <!-- <li ><a href='schedules.php'><span>Schedules Done</span></a></li> -->
 		     <!-- <li ><a href='transactions.php'><span>Transactions</span></a></li> -->
 		    
       </ul>
    </li>
- 
-   <!-- <li class='has-sub'><a href='#'><span>Items</span></a>
-      <ul>
-       <li ><a href='add_item.php'><span>Add Item</span></a> </li>
-         <li ><a href='add_item_category.php'><span>Add Category</span></a></li>
-		 <li ><a href='add_brand.php'><span>Add Brands</span></a></li>
-		  
-      </ul>
-   </li> -->
    <li class='has-sub'><a href='#'><span>Profile</span></a>
       <ul>
          <li ><a href='change_password.php'><span>Change Password</span></a> </li>
@@ -89,6 +80,8 @@ if(!isset($_SESSION['Reg_id']))
 </div>
 </div>
 </div>
+<div class="strip"> </div>
+<h4 style="text-align: center;">ADMIN DASHBOARD</h3>
  <div class="main">
     <div class="content">
     

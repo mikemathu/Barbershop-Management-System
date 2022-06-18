@@ -8,14 +8,12 @@ $uname=$_SESSION['username'];
 //echo $uname;
 
 $query = "select * from tbl_registration where Username='$uname'";
-// $query = "select * from tbl_registration where Email='$uname'";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 //echo $row['Reg_id'];
 
 include 'dbconnect.php';
 $sel="select Reg_id,Username from tbl_registration Where Username='$uname'";
-// $sel="select Reg_id,Username from tbl_registration Where Email='$uname'";
 $qry=mysqli_query($con,$sel);
 $ans=mysqli_fetch_array($qry);
 $custid=$ans['Reg_id'];
@@ -185,13 +183,7 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
           <tr>
             <td><b>Appoinment_time</b></td>
             <td><input type="time" name="time" id="time"    required/></td></tr>
-
-
-
-
-
-
-        
+    
             <td><b>Barbershop Available</b></td> 
                 <td><select name="txt_staff">
             <option>--Select--</option>
@@ -204,12 +196,11 @@ $.post('Package_booking_Add_jqry.php',{id: $(this).val()}, function(data)
               foreach($res1 as $roww){
                 
                 // echo $row["Username"];
-                 ?>
-                 
+                 ?>          
 
              
 
-                 <option value = <?php echo $roww['Reg_id'];?>>    <?php echo $roww['Username']; ?></option>
+                 <option  value = <?php echo $roww['Reg_id'];?>>    <?php echo $roww['Username']; ?></option>
 
 <?php
 }

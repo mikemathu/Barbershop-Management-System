@@ -34,19 +34,9 @@
 	  $z=mysqli_insert_id($con);
 	  $varsql1=mysqli_query($con,"INSERT INTO `tbl_login`(`Username`, `Password`, `Role_id`,
 	  `Reg_id`, `Status`) VALUES ('$var_barbershop_Name','$p','2','$z','1')");
-	  
-	//    $varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Cat_id`, `Qualification`,
-	//    `University`, `Year_of_pass`, `Experience`) VALUES
-	// ('$z')");
-// 	$varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Cat_id`, `Days_of_operation`, `Opening_time`,
-// 	`Closing_time`, `House_name`) VALUES
-//  ('$z','$var_specialization','$var_days_of_operation','$var_opening_time','$var_closing_time', '$var_house_name')");
-	$varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `House_name`) VALUES
- ('$z', '$var_house_name')");
-
-	//    $varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `Days_of_operation`, `Opening_time`,
-	//    `Closing_time`) VALUES
-	// ('$z','$var_days_of_operation','$var_opening_time','$var_closing_time')");
+	
+	$varsql3= mysqli_query($con,"INSERT INTO `tbl_barbershop`(`Reg_id`, `House_name`, `Originator_Mobile`, `Message`) VALUES
+ ('$z', '$var_house_name', '$var_Mobile', 'Hello, you are about to be serviced in the next 30 minutes')");
      
 	  header("Location:admin_barbershop_view.php");
 		}

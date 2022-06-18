@@ -16,39 +16,13 @@ include 'barbershop_header.php';
 <?php
 include 'dbconnect.php';
 $kid=$_GET['uid'];
-// $r=mysqli_query($con,"Select * from `tbl_barbershop` where `Reg_id`='$kid'");
 $r=mysqli_query($con,"Select * from `tbl_feedback` where `Barbershop_id`=$kid");
-$r1=mysqli_fetch_array($r);
-// $a=$_SESSION['Reg_id'];
-// // $x=$r1['Cat_id'];
-// $res=mysqli_query($con,"SELECT * FROM `tbl_appointment` where `Barbershop_id`='$kid' and `Status`='1' and `Barbershop_id`='$kid'");
-if(!empty($r1))
-{
-    // echo "<br><br><center><font color=red size=3>No Appointments Yet !!!</font></center>";
 
 	$i=1;	
 	while($row=mysqli_fetch_array($r))
 	{
-
-        // $kid=$_GET['uid'];
-        // // $r=mysqli_query($con,"Select * from `tbl_barbershop` where `Reg_id`='$kid'");
-        // $r=mysqli_query($con,"Select * from `tbl_feedback` where `Barbershop_id`=$kid");
-        // $r1=mysqli_fetch_array($r);
-        //  $x=$r1['Cat_id'];
-        // $x=1;
-        // $res1=mysqli_query($con,"SELECT * FROM `tbl_appointment` where `Barbershop_id`='$kid' and `Status`='1'");
-        // $row1=mysqli_fetch_array($r1);
-        if(empty($row))
-        {
-            echo "<br><br><center><font color=red size=3>No Appointments Yet !!!</font></center>";
-        }
-        else
-        {
 		$a=$row['Reg_id'];
 		$b=$row['Barbershop_id'];
-
-   
-
 		$c=$row['App_id'];
         // echo $c;
 	$res1=mysqli_query($con,"SELECT * FROM `tbl_registration` WHERE `Reg_id`='$a'");
@@ -66,31 +40,14 @@ if(!empty($r1))
 <td><center><?php echo $row['Date'];?></td>
 <td><center><?php echo $row3['ser_cat_name'];?></td>
 <td><center><?php echo $row['Feed_msg'];?></td>
-<?php
-    // }
-// $s=$row['Status'];
-// if($s==1)
-// {
-// ?>
-<!-- // <td><center><font color="green"><b><?php //echo "Requested";?></b></td> -->
- <?php
-// }
-// else if($s==0)
-// {
-// ?>
-<!-- <td><center><font color="green"><b><?php //echo "Approved";?></b></td><?php }?> -->
+
+<?php }?>
 <td><center>
     <a href="barbershop_appoint_service.php?uid=<?php //echo $row['App_id'];?>" onclick="return confirm('Serviced this customer??')"></a>
 </td>
 <?php
 $i++;
-}
 
-}
-else{
-     echo "<br><br><td ><center ><font color=red size=3>No Appointments Yet !!!</font></td></center>";
-
-}
 ?>
 <style>
 table {
