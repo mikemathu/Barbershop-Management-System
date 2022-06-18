@@ -2,9 +2,7 @@
 include 'barbershop_header.php';
 require 'vendor/autoload.php';
 
-if(isset($_POST['submit'])){
-
-  
+if(isset($_POST['submit'])){  
   //SMS API by Message bird
 	  $recipient = $_POST['recipient'];
 	  $sms = $_POST['sms'];	
@@ -64,7 +62,6 @@ if(isset($_POST['submit'])){
 	while($row=mysqli_fetch_array($res))
 	{
 		$app_id = $row['App_id'];
-		// echo $app_id;
 		$a=$row['ser_cat_id'];
 		$b=$row['Reg_no'];
 		$c=$row['Barbershop_id'];
@@ -107,33 +104,14 @@ if(isset($_POST['submit'])){
 ?>
 
 <td>
-<!-- <form action="barbershop_appoint_service.php" method="POST"> -->
-<form action="barbershop_appointment_status.php" method="POST">
-	<input type="hidden"  name="recipient" id="recipient" value="<?php echo $row['Originator_Mobile'];?>" >
-	<textarea name="sms" id="sms" cols="30" rows="10" style="display:none;"  ><?php echo $row['Message'];?></textarea>
-	<!-- <textarea name="sms" id="sms" cols="30" rows="10" style="display:none; ><?php //echo $row['Message'];?></textarea> -->
- 
-
-
-
-
-
-	<center>
-	<!-- <a href="barbershop_appoint_service.php?uid=<?php //echo $row['App_id'];?>" onclick="return confirm('Serviced this customer??')"><img src="images/symbol_check.png" width="30px">
-	</a>
-
-
- <form action="barbershop_appoint_service2.php" method="POST"> -->
-<!-- <form action="barbershop_appointment_status.php" method="POST"> -->
-<!-- <form action="barbershop_appointment_status.php" method="POST"> -->
-	<input type="hidden" name="app_id" id="app_id" value="<?php echo $app_id;?>" >
-	<!-- <input type="submit" Value="Confirm" name="submit" id="submit" onclick="return confirm('Serviced this customer??')"> -->
-	<input type="submit" Value="Confirm" name="submit" id="submit" onclick="return confirm('Serviced this customer??')">
-
-</form>
-
+	<form action="barbershop_appointment_status.php" method="POST">
+		<input type="hidden"  name="recipient" id="recipient" value="<?php echo $row['Originator_Mobile'];?>" >
+		<textarea name="sms" id="sms" cols="30" rows="10" style="display:none;"  ><?php echo $row['Message'];?></textarea>
+		<center>
+		<input type="hidden" name="app_id" id="app_id" value="<?php echo $app_id;?>" >	
+		<input type="submit" Value="Confirm" name="submit" id="submit" onclick="return confirm('Serviced this customer??')">
+	</form>
 </td>
-
 
 <?php
 $i++;

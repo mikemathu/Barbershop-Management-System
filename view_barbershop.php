@@ -19,9 +19,6 @@ $row1=mysqli_fetch_array($result1);
 $d=$row['Location_id'];
 $result2=mysqli_query($con,"select Location_name from tbl_location where Location_id='$d'");
 $row2=mysqli_fetch_array($result2);
-// $c=$row1['Cat_id'];
-// $result3=mysqli_query($con,"select * from `tbl_service_category` where `Cat_id`='$c'");
-// $row3=mysqli_fetch_array($result3);
 	?>
 	<table border=2 width=10%>
 <img src="images/<?php echo $row['Image'];?>" alt="" height="281" width="246"     style="padding-left: 430px; margin-bottom: -325px;"/>
