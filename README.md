@@ -4,11 +4,12 @@
 
 # sms_messageBird-Api
 
-Create a developer Account in messageBird which will give you access to their sms gateway services i.e. test and live api keys(sms)
 
-install composer(i.e if you have not yet installed it in your machine)
+1. Create a developer Account in messageBird which will give you access to their sms gateway services i.e. test and live api keys(sms)
 
-run 'composer install' in terminal.
+2. install composer(i.e if you have not yet installed it in your machine otherwise skip this step)
+
+3. run 'composer install' in terminal.
 
 ## Using the app
 1. Register/Add Barbershop (database tables involved: tbl_regisration, tbl_barbershop, tbl_login )
