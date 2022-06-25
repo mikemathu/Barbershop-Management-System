@@ -1,5 +1,4 @@
-#Ignore Vendor folder
-/vendor
 
-#Ignore .lock file
+vendor/
+
 composer.lock
