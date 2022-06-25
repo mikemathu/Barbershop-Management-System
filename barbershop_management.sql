@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2022 at 05:23 PM
+-- Generation Time: Jun 25, 2022 at 01:05 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -38,6 +38,14 @@ CREATE TABLE `tbl_appointment` (
   `Status` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_appointment`
+--
+
+INSERT INTO `tbl_appointment` (`App_id`, `Reg_no`, `ser_cat_id`, `Cat_id`, `Date`, `Time`, `Barbershop_id`, `Status`) VALUES
+(110, 44, '1', 1, '2022-06-22', '17:00:00', 43, 2),
+(111, 44, '2', 1, '2022-06-22', '17:21:00', 43, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -51,6 +59,14 @@ CREATE TABLE `tbl_barbershop` (
   `Originator_Mobile` varchar(15) NOT NULL,
   `Message` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_barbershop`
+--
+
+INSERT INTO `tbl_barbershop` (`Detail_id`, `Reg_id`, `House_name`, `Originator_Mobile`, `Message`) VALUES
+(11, 42, 'PlazaOne', '0798827450', 'Hello, you are about to be serviced in the next 30 minutes'),
+(12, 43, 'Plaza Two', '+254111843590', 'Oyahh, uko wapi na service yaki iko almost');
 
 -- --------------------------------------------------------
 
@@ -106,6 +122,13 @@ CREATE TABLE `tbl_feedback` (
   `status` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_feedback`
+--
+
+INSERT INTO `tbl_feedback` (`Feed_id`, `App_id`, `Reg_id`, `Barbershop_id`, `Date`, `Feed_msg`, `status`) VALUES
+(34, '110', 44, '43', '2022-06-22', 'Nice service', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -147,7 +170,10 @@ CREATE TABLE `tbl_login` (
 --
 
 INSERT INTO `tbl_login` (`Log_id`, `Username`, `Password`, `Role_id`, `Reg_id`, `Status`) VALUES
-(3, 'admin', 'admin', 0, 0, 0);
+(3, 'admin', 'admin', 0, 0, 0),
+(46, 'KevinShop', '25d55ad283aa400af464c76d713c07ad', 2, 42, 1),
+(47, 'JumaShop', '25d55ad283aa400af464c76d713c07ad', 2, 43, 1),
+(48, 'CustomerOne', '25d55ad283aa400af464c76d713c07ad', 1, 44, 1);
 
 -- --------------------------------------------------------
 
@@ -164,6 +190,15 @@ CREATE TABLE `tbl_registration` (
   `Image` varchar(50) NOT NULL,
   `Status` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_registration`
+--
+
+INSERT INTO `tbl_registration` (`Reg_id`, `Username`, `Location_id`, `Mobile`, `Email`, `Image`, `Status`) VALUES
+(42, 'KevinShop', 2, '0798827450', 'kevinshop@gmail.com', '8.jpg', 2),
+(43, 'JumaShop', 1, '0799999663', 'jumashop@gmail.com', '9.jpg', 2),
+(44, 'CustomerOne', 1, '0798827450', 'customerone@gmail.com', '15.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -249,13 +284,13 @@ ALTER TABLE `tbl_service_category`
 -- AUTO_INCREMENT for table `tbl_appointment`
 --
 ALTER TABLE `tbl_appointment`
-  MODIFY `App_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `App_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `tbl_barbershop`
 --
 ALTER TABLE `tbl_barbershop`
-  MODIFY `Detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `Detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tbl_category`
@@ -267,7 +302,7 @@ ALTER TABLE `tbl_category`
 -- AUTO_INCREMENT for table `tbl_feedback`
 --
 ALTER TABLE `tbl_feedback`
-  MODIFY `Feed_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `Feed_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `tbl_location`
@@ -279,13 +314,13 @@ ALTER TABLE `tbl_location`
 -- AUTO_INCREMENT for table `tbl_login`
 --
 ALTER TABLE `tbl_login`
-  MODIFY `Log_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `Log_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `tbl_registration`
 --
 ALTER TABLE `tbl_registration`
-  MODIFY `Reg_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `Reg_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `tbl_service_category`
