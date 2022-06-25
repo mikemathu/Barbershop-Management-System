@@ -6,12 +6,12 @@ if(isset($_POST['submit'])){
   //SMS API by Message bird
 	  $recipient = $_POST['recipient'];
 	  $sms = $_POST['sms'];	
-	  $messageBird = new \MessageBird\Client('u91ylkTti8QkmDKEVgGq4P02t'); //Live
+	  $messageBird = new \MessageBird\Client('LIVEKEY'); //Live
 	  $message =  new \MessageBird\Objects\Message();
 	  try{    
 			$message->originator = $recipient;
 			// $message->recipients = $recipient;
-			$message->recipients = '+254111834590';
+			$message->recipients = '+254XXXXXX';
 			$message->body = $sms;
 			$response = $messageBird->messages->create($message);
 	  }
