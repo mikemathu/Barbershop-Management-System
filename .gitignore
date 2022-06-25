@@ -1,2 +1,5 @@
+#Ignore Vendor folder
 *vendor
 
+#Ignore .lock file
+.lock
