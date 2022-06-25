@@ -1,5 +1,5 @@
 #Ignore Vendor folder
-*vendor
+vendor
 
 #Ignore .lock file
-.lock
+composer.lock
