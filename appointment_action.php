@@ -99,7 +99,7 @@ if($sql)
 else
 {
 	?>
-<center><h2><script language='javascript'>window.alert('Sorry,the time u selected already passed!!')
+<center><h2><script language='javascript'>window.alert('Sorry,the time you selected already passed!!')
 		   window.location.href='appointment_add.php?uid=<?php echo $_SESSION['ser_cat_id'];?>'</script></h2>
 <?php 
 }

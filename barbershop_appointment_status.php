@@ -6,11 +6,12 @@ if(isset($_POST['submit'])){
   //SMS API by Message bird
 	  $recipient = $_POST['recipient'];
 	  $sms = $_POST['sms'];	
-	  $messageBird = new \MessageBird\Client('E4X8bNIGo1lpi6rvIjSQ2nzxR'); //Live
+	  $messageBird = new \MessageBird\Client('u91ylkTti8QkmDKEVgGq4P02t'); //Live
 	  $message =  new \MessageBird\Objects\Message();
 	  try{    
 			$message->originator = $recipient;
-			$message->recipients = [$recipient];
+			// $message->recipients = $recipient;
+			$message->recipients = '+254111834590';
 			$message->body = $sms;
 			$response = $messageBird->messages->create($message);
 	  }
@@ -106,7 +107,7 @@ if(isset($_POST['submit'])){
 <td>
 	<form action="barbershop_appointment_status.php" method="POST">
 		<input type="hidden"  name="recipient" id="recipient" value="<?php echo $row['Originator_Mobile'];?>" >
-		<textarea name="sms" id="sms" cols="30" rows="10" style="display:none;"  ><?php echo $row['Message'];?></textarea>
+		<textarea name="sms" id="sms" cols="30" rows="10" style="display:none"   ><?php echo $row['Message'];?></textarea>
 		<center>
 		<input type="hidden" name="app_id" id="app_id" value="<?php echo $app_id;?>" >	
 		<input type="submit" Value="Confirm" name="submit" id="submit" onclick="return confirm('Serviced this customer??')">
